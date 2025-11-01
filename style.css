@@ -1,0 +1,81 @@
+/* Tema: Branco + Dourado Clássico (B3) + Tipografia F3 (Lora + Montserrat) */
+/* Importação das fontes Google */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --bg: #ffffff;
+    --text: #333333;
+    --gold: #C6A667;
+    --light-gray: #f5f5f5;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    font-family: 'Lora', serif;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+header {
+    background: var(--light-gray);
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 4px solid var(--gold);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.6rem;
+    margin: 0;
+    color: var(--gold);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: var(--gold);
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+}
+
+main {
+    max-width: 980px;
+    margin: auto;
+    padding: 20px;
+}
+
+#quotes-section {
+    background: var(--light-gray);
+    padding: 20px;
+    border-left: 5px solid var(--gold);
+    margin-bottom: 30px;
+}
+
+#quote-box {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin: 15px 0;
+}
+
+button {
+    background: var(--gold);
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    font-family: 'Montserrat';
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: .9rem;
+    background: var(--light-gray);
+    border-top: 4px solid var(--gold);
+}
