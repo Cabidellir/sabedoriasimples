@@ -66,10 +66,11 @@ button {
     font-family: 'Montserrat';
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    opacity: 0.85;
+    background-color: #a18c4e; /* Ajustei o hover para uma cor mais visível */
 }
 
 footer {
@@ -95,6 +96,7 @@ nav a {
     color: var(--gold);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    transition: opacity 0.3s ease;
 }
 
 nav a:hover {
