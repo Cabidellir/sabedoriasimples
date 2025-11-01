@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Sabedoria Simples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sabedoria Simples</h1>
+        <p>Menos complicação. Mais sabedoria.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="artigos.html">Artigos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about-section">
+            <h2>Sobre Sabedoria Simples</h2>
+            <p>Sabedoria Simples é um espaço dedicado à filosofia motivacional e à reflexão. Nosso objetivo é levar ensinamentos profundos de filósofos renomados de uma forma prática e acessível, para que você possa aplicar na sua vida diária.</p>
+            <p>Nosso foco é tornar a filosofia mais próxima do seu cotidiano, ajudando você a se tornar uma pessoa mais equilibrada, resiliente e focada.</p>
+            <p>Inspirado nas ideias de grandes pensadores como **Epicteto**, **Sêneca**, **Aristóteles** e **Marco Aurélio**, oferecemos artigos, reflexões diárias e desafios para uma vida mais plena.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Sabedoria Simples — Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
