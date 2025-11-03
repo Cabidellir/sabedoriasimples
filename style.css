@@ -1,5 +1,4 @@
-/* Tema: Branco + Dourado Clássico (B3) + Tipografia F3 (Lora + Montserrat) */
-/* Importação das fontes Google */
+/* Tema Premium: Branco + Dourado Clássico com Cabeçalho Slim Fixado */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@400;700&display=swap');
 
 :root {
@@ -9,6 +8,7 @@
     --light-gray: #f5f5f5;
 }
 
+/* Reset */
 body {
     margin: 0;
     background: var(--bg);
@@ -17,35 +17,108 @@ body {
     line-height: 1.7;
 }
 
+/* ✅ CABEÇALHO FIXO PREMIUM */
 header {
-    background: var(--light-gray);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(245, 245, 245, 0.96);
+    padding: 12px 10px;
     text-align: center;
-    padding: 40px 20px;
-    border-bottom: 4px solid var(--gold);
+    border-bottom: 3px solid var(--gold);
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
-h1 a {
-    text-decoration: none;
+header.scrolled {
+    background: rgba(245, 245, 245, 0.90);
+    padding: 6px 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    margin: 0;
     color: var(--gold);
+    cursor: pointer;
 }
 
-h1 a:hover {
+header p {
+    margin: 3px 0 0;
+    font-size: 0.8rem;
     opacity: 0.7;
 }
 
+/* Espaço para que o conteúdo não fique escondido atrás do header */
+main {
+    max-width: 980px;
+    margin: 110px auto 0;
+    padding: 20px;
+}
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--gold);
     border-bottom: 2px solid var(--gold);
     display: inline-block;
+    margin-top: 0;
 }
 
-main {
-    max-width: 980px;
-    margin: auto;
-    padding: 20px;
+/* ✅ MENU */
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 6px 0 0;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--gold);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+/* ✅ MENU MOBILE */
+#menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: var(--gold);
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 10px 0;
+        gap: 10px;
+        background: rgba(245,245,245,0.98);
+        border-top: 2px solid var(--gold);
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
 }
 
 #quotes-section {
@@ -56,7 +129,7 @@ main {
 }
 
 #quote-box {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-style: italic;
     margin: 15px 0;
 }
@@ -73,86 +146,15 @@ button {
 }
 
 button:hover {
-    background-color: #a18c4e; /* Ajustei o hover para uma cor mais visível */
+    background-color: #a18c4e;
 }
 
+/* ✅ Rodapé */
 footer {
     text-align: center;
-    padding: 20px;
-    font-size: .9rem;
+    padding: 18px;
+    font-size: .85rem;
     background: var(--light-gray);
-    border-top: 4px solid var(--gold);
-}
-
-/* Menu */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0 0;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--gold);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    transition: opacity 0.3s ease;
-}
-
-nav a:hover {
-    opacity: 0.7;
-}
-
-/* Responsivo - Exibe ícone de hambúrguer em telas pequenas */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        display: none; /* Ocultar menu por padrão no mobile */
-    }
-
-    #menu-toggle {
-        display: block; /* Exibe o ícone de hambúrguer */
-        cursor: pointer;
-        font-size: 30px;
-    }
-
-    #menu.open {
-        display: flex; /* Exibe o menu quando o ícone for clicado */
-    }
-}
-
-/* Estilo geral para o menu */
-#menu {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Ocultar o ícone de hambúrguer por padrão (só aparece em dispositivos móveis) */
-#menu-toggle {
-    display: none;
-    cursor: pointer;
-}
-
-/* Estilo para o menu no mobile */
-@media (max-width: 768px) {
-    #menu {
-        display: none; /* Menu oculto por padrão no mobile */
-        flex-direction: column;
-        text-align: center;
-    }
-
-    /* Exibir o ícone de hambúrguer no mobile */
-    #menu-toggle {
-        display: block;
-    }
-
-    /* Exibir o menu quando o ícone de hambúrguer for clicado */
-    #menu.open {
-        display: flex;
-    }
+    border-top: 3px solid var(--gold);
+    margin-top: 40px;
 }
