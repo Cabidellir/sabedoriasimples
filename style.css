@@ -1,82 +1,54 @@
-/* Tema Premium: Branco + Dourado Clássico com Cabeçalho Slim Fixado */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@400;700&display=swap');
 
 :root {
     --bg: #ffffff;
-    --text: #333333;
+    --text: #444;
     --gold: #C6A667;
-    --light-gray: #f5f5f5;
+    --light-gray: #f7f7f7;
 }
 
-/* Reset */
 body {
     margin: 0;
     background: var(--bg);
     font-family: 'Lora', serif;
     color: var(--text);
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
-/* ✅ CABEÇALHO FIXO PREMIUM */
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: rgba(245, 245, 245, 0.96);
-    padding: 12px 10px;
-    text-align: center;
+    background: var(--light-gray);
+    padding: 10px 20px;
     border-bottom: 3px solid var(--gold);
-    z-index: 1000;
-    transition: all 0.3s ease;
+    text-align: center;
 }
 
-header.scrolled {
-    background: rgba(245, 245, 245, 0.90);
-    padding: 6px 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-}
-
-h1 {
+header h1 a {
+    color: var(--gold) !important;
+    text-decoration: none !important;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
-    margin: 0;
-    color: var(--gold);
-    cursor: pointer;
+    font-size: 2rem;
 }
 
 header p {
-    margin: 3px 0 0;
-    font-size: 0.8rem;
-    opacity: 0.7;
+    font-size: 0.95rem;
+    color: var(--text);
+    margin: 5px 0 10px;
 }
 
-/* Espaço para que o conteúdo não fique escondido atrás do header */
-main {
-    max-width: 980px;
-    margin: 110px auto 0;
-    padding: 20px;
-}
-
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem;
+/* MENU */
+#menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
     color: var(--gold);
-    border-bottom: 2px solid var(--gold);
-    display: inline-block;
-    margin-top: 0;
 }
 
-/* ✅ MENU */
-nav {
-    margin-top: 10px;
-}
-
-nav ul {
+#menu ul {
     list-style: none;
     padding: 0;
-    margin: 6px 0 0;
+    margin: 0;
     display: flex;
-    gap: 16px;
+    gap: 18px;
     justify-content: center;
 }
 
@@ -85,34 +57,40 @@ nav a {
     color: var(--gold);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 0.9rem;
-    transition: opacity 0.3s ease;
 }
 
 nav a:hover {
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
-/* ✅ MENU MOBILE */
-#menu-toggle {
-    display: none;
-    cursor: pointer;
-    font-size: 28px;
-    color: var(--gold);
-    margin-top: 5px;
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
 }
 
+#quotes-section {
+    padding: 20px;
+    background: var(--light-gray);
+    border-left: 4px solid var(--gold);
+    margin-bottom: 25px;
+}
+
+#quote-box {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-    nav ul {
+    #menu ul {
         display: none;
         flex-direction: column;
-        padding: 10px 0;
-        gap: 10px;
-        background: rgba(245,245,245,0.98);
-        border-top: 2px solid var(--gold);
+        text-align: center;
+        padding-top: 10px;
     }
 
-    nav ul.open {
+    #menu.open ul {
         display: flex;
     }
 
@@ -121,40 +99,10 @@ nav a:hover {
     }
 }
 
-#quotes-section {
-    background: var(--light-gray);
-    padding: 20px;
-    border-left: 5px solid var(--gold);
-    margin-bottom: 30px;
-}
-
-#quote-box {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin: 15px 0;
-}
-
-button {
-    background: var(--gold);
-    color: #fff;
-    border: none;
-    padding: 10px 18px;
-    font-family: 'Montserrat';
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #a18c4e;
-}
-
-/* ✅ Rodapé */
 footer {
     text-align: center;
-    padding: 18px;
-    font-size: .85rem;
+    padding: 15px;
     background: var(--light-gray);
     border-top: 3px solid var(--gold);
-    margin-top: 40px;
+    font-size: .9rem;
 }
