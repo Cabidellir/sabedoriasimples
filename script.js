@@ -24,3 +24,8 @@ newQuote();
 
 // Ao clicar no botão, troca a frase
 newQuoteBtn.addEventListener("click", newQuote);
+
+// Menu Responsivo (Hamburguer)
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.getElementById('menu').classList.toggle('open');
+});
