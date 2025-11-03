@@ -1,3 +1,4 @@
+<!-- Sabedoria Simples - Contato com Auto Ads -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Sabedoria Simples</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google AdSense Auto Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3375728934205202"
+    crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <h1>Sabedoria Simples</h1>
@@ -15,7 +21,7 @@
                 <li><a href="index.html">Início</a></li>
                 <li><a href="artigos.html">Artigos</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -23,14 +29,19 @@
     <main>
         <section id="contact-section">
             <h2>Entre em Contato</h2>
-            <p>Tem algo que você gostaria de compartilhar ou perguntar? Fique à vontade para enviar uma mensagem!</p>
-            <form action="mailto:seuemail@dominio.com" method="POST" enctype="multipart/form-data">
+            <p>Tem algo que você gostaria de compartilhar ou perguntar?<br>
+            Nos envie uma mensagem! 😊</p>
+
+            <form action="mailto:SEU-EMAIL-AQUI" method="POST" enctype="text/plain">
                 <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" placeholder="Seu nome" required>
+
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="seunome@email.com" required>
+
                 <label for="message">Mensagem:</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="message" placeholder="Escreva sua mensagem..." rows="6" required></textarea>
+
                 <button type="submit">Enviar</button>
             </form>
         </section>
