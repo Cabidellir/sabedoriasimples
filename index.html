@@ -1,50 +1,50 @@
-<!-- Sabedoria Simples - Menu Responsivo -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabedoria Simples</title>
-    <link rel="stylesheet" href="style.css">
 
     <!-- Google AdSense Auto Ads -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3375728934205202"
-    crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3375728934205202" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
 <header>
     <h1><a href="index.html">Sabedoria Simples</a></h1>
     <p>Menos complicação. Mais sabedoria.</p>
-    <nav>
-        <ul id="menu">
+
+    <div id="menu-toggle">☰</div>
+    <nav id="menu">
+        <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="artigos.html">Artigos</a></li>
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
-        <div id="menu-toggle" class="menu-icon">&#9776;</div>
     </nav>
 </header>
 
+<main>
+    <section id="quotes-section">
+        <h2>Reflexões Diárias</h2>
+        <div id="quote-box"></div>
+        <button id="new-quote-btn">Nova Reflexão</button>
+    </section>
 
-    <main>
-        <section id="quotes-section">
-            <h2>Reflexões Diárias</h2>
-            <div id="quote-box"></div>
-            <button id="new-quote-btn">Nova Reflexão</button>
-        </section>
+    <!-- Auto Ads cuida do restante -->
+    <section id="articles">
+        <h2>Artigos Recentes</h2>
+        <p>Conteúdo será adicionado aqui…</p>
+    </section>
+</main>
 
-        <section id="articles">
-            <h2>Artigos Recentes</h2>
-            <p>Conteúdo será adicionado aqui…</p>
-        </section>
-    </main>
+<footer>
+    <p>© 2025 Sabedoria Simples — Todos os direitos reservados.</p>
+</footer>
 
-    <footer>
-        <p>© 2025 Sabedoria Simples — Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
