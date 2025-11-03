@@ -110,3 +110,35 @@ nav a:hover {
         gap: 10px;
     }
 }
+
+/* Estilo geral para o menu */
+#menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Ocultar o ícone de hambúrguer por padrão (só aparece em dispositivos móveis) */
+#menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* Estilo para o menu no mobile */
+@media (max-width: 768px) {
+    #menu {
+        display: none; /* Menu oculto por padrão no mobile */
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Exibir o ícone de hambúrguer no mobile */
+    #menu-toggle {
+        display: block;
+    }
+
+    /* Exibir o menu quando o ícone de hambúrguer for clicado */
+    #menu.open {
+        display: flex;
+    }
+}
