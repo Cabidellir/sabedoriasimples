@@ -1,6 +1,4 @@
-// Script Motivacional + Menu Mobile
-
-// ======= FRASES =======
+// Frases
 const quotes = [
     "A felicidade da sua vida depende da qualidade dos seus pensamentos. — Marco Aurélio",
     "Dificuldades fortalecem a mente, assim como o trabalho fortalece o corpo. — Sêneca",
@@ -12,28 +10,38 @@ const quotes = [
     "Primeiro diga a si o que você seria; depois, faça o que precisa fazer. — Epicteto"
 ];
 
-// Só executa as frases se existir a caixa de frases na página
+// Troca de frase
 const quoteBox = document.getElementById("quote-box");
 const newQuoteBtn = document.getElementById("new-quote-btn");
 
 function newQuote() {
-    if (!quoteBox) return;
     const index = Math.floor(Math.random() * quotes.length);
     quoteBox.textContent = quotes[index];
 }
 
-if (quoteBox) {
-    newQuote();
-    newQuoteBtn.addEventListener("click", newQuote);
-}
+if (quoteBox) newQuote();
+if (newQuoteBtn) newQuoteBtn.addEventListener("click", newQuote);
 
+// ✅ Header com efeito ao rolar
+const header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 10);
+});
 
-// ======= MENU MOBILE =======
+// ✅ Menu Mobile em todas as páginas
 const menuToggle = document.getElementById("menu-toggle");
-const menu = document.getElementById("menu");
+const menu = document.querySelector("nav ul");
 
-if (menuToggle && menu) {
+if (menuToggle) {
     menuToggle.addEventListener("click", () => {
         menu.classList.toggle("open");
+    });
+}
+
+// ✅ Título clicável → página inicial
+const title = document.querySelector("header h1");
+if (title) {
+    title.addEventListener("click", () => {
+        window.location.href = "index.html";
     });
 }
