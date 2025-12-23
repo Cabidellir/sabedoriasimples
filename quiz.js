@@ -96,11 +96,15 @@ function showResult() {
     questionContainer.style.display = "none";
     resultContainer.style.display = "block";
     let rank = "";
-    if(score === 5) rank = "Mente Brilhante (QI Estimado: 130+)";
-    else if(score >= 3) rank = "Raciocínio Aguçado (QI Estimado: 100-115)";
-    else rank = "Mente em Desenvolvimento (Continue praticando!)";
     
-    scoreText.innerText = `Você acertou ${score} de ${quizData.length}. Nível: ${rank}`;
+    // Escala de QI baseada em 10 questões
+    if(score === 10) rank = "Gênio (QI Estimado: 145+)";
+    else if(score >= 8) rank = "Mente Brilhante (QI Estimado: 120-135)";
+    else if(score >= 6) rank = "Acima da Média (QI Estimado: 100-115)";
+    else if(score >= 4) rank = "Médio (QI Estimado: 90-100)";
+    else rank = "Foco Necessário (Exercite mais a lógica!)";
+    
+    scoreText.innerHTML = `Acertaste <strong>${score} de 10</strong>.<br><br>Nível: <strong>${rank}</strong>`;
 }
 
 loadQuestion();
