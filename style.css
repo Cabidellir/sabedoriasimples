@@ -15,11 +15,14 @@
 }
 
 body {
-    margin: 0;
-    background: var(--bg);
-    font-family: 'Lora', serif;
-    color: var(--text);
-    line-height: 1.8; /* Aumentado para leitura mais confortável */
+    line-height: 1.8; /* Aumenta o espaço entre linhas */
+    letter-spacing: -0.01em; /* Torna a leitura mais moderna */
+    color: #333; /* Evita o preto puro (#000) que cansa os olhos */
+}
+
+.post-content p {
+    margin-bottom: 1.5rem; /* Espaço maior entre parágrafos */
+    font-size: 1.1rem;
 }
 
 header {
