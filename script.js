@@ -1,5 +1,5 @@
 /**
- * Sabedoria Simples - Script Principal
+ * Sabedoria Simples - Script Principal Otimizado
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,31 +12,44 @@ document.addEventListener("DOMContentLoaded", () => {
         "Você tem poder sobre sua mente, não sobre os acontecimentos. — Marco Aurélio",
         "Primeiro diga a si o que você seria; depois, faça o que precisa fazer. — Epicteto",
         "A sorte é o que acontece quando a preparação encontra a oportunidade. — Sêneca",
-        "Não espere que os eventos aconteçam como você deseja. Deseje que eles aconteçam como acontecem. — Epicteto"
+        "Não espere que os eventos aconteçam como você deseja. Deseje que eles aconteçam como acontecem. — Epicteto",
+        "A vida é muito curta para ser pequena. — Benjamin Disraeli",
+        "Onde quer que haja um ser humano, há uma oportunidade para a bondade. — Sêneca"
     ];
+
+    // Cores suaves para o fundo da seção de frases (Dinamismo Visual)
+    const softColors = ['#fdfdfd', '#fcf9f2', '#f2f7f1', '#f1f4f7', '#f9f6f1'];
 
     const quoteBox = document.getElementById("quote-box");
     const newQuoteBtn = document.getElementById("new-quote-btn");
+    const quotesSection = document.getElementById("quotes-section");
 
     if (quoteBox && newQuoteBtn) {
         function newQuote() {
-            // Adiciona um efeito de fade out suave
+            // Efeito de fade out
             quoteBox.style.opacity = 0;
             
             setTimeout(() => {
-                const index = Math.floor(Math.random() * quotes.length);
-                quoteBox.textContent = quotes[index];
+                // Sorteia nova frase
+                const quoteIndex = Math.floor(Math.random() * quotes.length);
+                quoteBox.textContent = quotes[quoteIndex];
+
+                // Sorteia nova cor de fundo sutil (se a seção existir)
+                if (quotesSection) {
+                    const colorIndex = Math.floor(Math.random() * softColors.length);
+                    quotesSection.style.backgroundColor = softColors[colorIndex];
+                }
+
                 // Fade in
                 quoteBox.style.opacity = 1;
             }, 300);
         }
 
-        // Configuração inicial de transição via JS para garantir que funcione
+        // Configuração de transição suave
         quoteBox.style.transition = "opacity 0.4s ease";
+        if (quotesSection) quotesSection.style.transition = "background-color 0.8s ease";
         
-        // Carrega a primeira frase
         newQuote();
-        
         newQuoteBtn.addEventListener("click", newQuote);
     }
 
@@ -46,11 +59,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (menuToggle && menu) {
         menuToggle.addEventListener("click", (e) => {
-            e.stopPropagation(); // Evita que o clique feche o menu imediatamente
+            e.stopPropagation();
             menu.classList.toggle("open");
         });
 
-        // Fecha o menu se clicar em qualquer lugar fora dele (Melhoria de UX)
         document.addEventListener("click", (e) => {
             if (menu.classList.contains("open") && !menu.contains(e.target) && e.target !== menuToggle) {
                 menu.classList.remove("open");
@@ -58,15 +70,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- MELHORIA DE ACESSIBILIDADE ---
-    // Faz o header sumir ou mudar de cor ao rolar a página (opcional)
+    // --- EFEITOS DINÂMICOS DE SCROLL ---
     const header = document.querySelector('header');
+    
+    // Throttle simples para performance no scroll
+    let isScrolling;
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
-        } else {
-            header.style.boxShadow = "none";
-        }
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(() => {
+            if (window.scrollY > 50) {
+                header.style.boxShadow = "0 2px 15px rgba(0,0,0,0.08)";
+                header.style.padding = "15px 20px"; // Header encolhe um pouco ao rolar
+            } else {
+                header.style.boxShadow = "none";
+                header.style.padding = "30px 20px"; // Volta ao tamanho normal
+            }
+        }, 50);
     });
 
 });
