@@ -255,3 +255,49 @@ footer {
     text-align: center;
     margin-top: 30px;
 }
+
+/* Container das aspas e do texto */
+.quote-container {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+/* Estilo geral das aspas */
+.quote-icon-left, .quote-icon-right {
+    font-family: "Georgia", serif;
+    font-size: 80px; /* Bem grandes como você pediu */
+    color: #C6A667; /* Cor dourada (ou var(--gold)) */
+    opacity: 0.3; /* Levemente transparente para não atrapalhar o texto */
+    position: absolute;
+    line-height: 1;
+}
+
+/* Posicionamento da aspa esquerda (topo) */
+.quote-icon-left {
+    top: -20px;
+    left: 0;
+}
+
+/* Posicionamento da aspa direita (base) */
+.quote-icon-right {
+    bottom: -40px;
+    right: 0;
+}
+
+/* O texto da citação dentro do box */
+#quote-box {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1; /* Garante que o texto fique acima das aspas se elas encostarem */
+}
+
+/* Ajuste no botão para não ficar colado */
+#new-quote-btn {
+    margin-top: 30px;
+}
