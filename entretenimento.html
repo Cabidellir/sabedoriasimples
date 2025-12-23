@@ -2,12 +2,14 @@
 <html lang="pt-BR">
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3375728934205202" crossorigin="anonymous"></script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafios Mentais | Sabedoria Simples</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
     <h1><a href="index.html">Sabedoria Simples</a></h1>
     <nav id="menu">
@@ -24,37 +26,37 @@
 <main>
     <section class="page-section">
         <h2 class="page-title">Exercite sua Mente</h2>
-        <p style="text-align: center;">A sabedoria também exige uma mente afiada. Teste sua capacidade de raciocínio lógico abaixo.</p>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 20px auto; padding: 0 20px;">
+            A sabedoria também exige uma mente afiada. Teste sua capacidade de raciocínio lógico e clareza mental abaixo.
+        </p>
 
-    <div id="progress-bar-container" style="width: 100%; background: #eee; height: 8px; border-radius: 10px; margin-bottom: 20px;">
-        <div id="progress-bar" style="width: 0%; background: var(--gold); height: 100%; border-radius: 10px; transition: 0.3s;"></div>
-    </div>
-
-        
-        <div id="quiz-container" style="background: #f9f9f9; padding: 30px; border-radius: 15px; margin: 30px auto; border: 1px solid #eee; max-width: 600px;">
+        <div id="quiz-container" style="background: #f9f9f9; padding: 30px; border-radius: 15px; margin: 20px auto; border: 1px solid #eee; max-width: 600px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
             
+            <div id="progress-bar-container" style="width: 100%; background: #e0e0e0; height: 6px; border-radius: 10px; margin-bottom: 25px;">
+                <div id="progress-bar" style="width: 0%; background: var(--gold, #C6A667); height: 100%; border-radius: 10px; transition: 0.4s ease;"></div>
+            </div>
+
             <div id="question-container">
-                <h3 id="question-text" style="margin-bottom: 20px;">Carregando desafio...</h3>
-                <div id="options-container" style="display: grid; gap: 10px;">
+                <h3 id="question-text" style="margin-bottom: 25px; line-height: 1.4; min-height: 60px;">Carregando desafio...</h3>
+                <div id="options-container" style="display: grid; gap: 12px;">
                     </div>
             </div>
 
-            <div id="result-container" style="display: none; text-align: center;">
-                <h3>Seu Resultado:</h3>
-                <p id="score-text" style="font-size: 1.2rem; margin-bottom: 20px; color: var(--text);"></p>
+            <div id="result-container" style="display: none; text-align: center; animation: fadeIn 0.5s ease;">
+                <h3 style="color: var(--gold, #C6A667);">Seu Resultado</h3>
+                <p id="score-text" style="font-size: 1.3rem; margin: 20px 0; color: #333; font-weight: 600;"></p>
                 
-                <div id="share-section" style="margin: 20px 0; padding: 15px; border-top: 1px solid #eee;">
-                    <p style="font-size: 0.9rem; margin-bottom: 15px;">Desafie os seus amigos:</p>
-                    <button id="share-wa-btn" style="background: #25D366; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-weight: bold; font-family: 'Montserrat', sans-serif;">
-                        Partilhar no WhatsApp
+                <div id="share-section" style="margin: 25px 0; padding: 20px; border-top: 1px solid #ddd; background: #fff; border-radius: 10px;">
+                    <p style="font-size: 0.9rem; margin-bottom: 15px; color: #666;">Gostou do desafio? Compartilhe com seus amigos:</p>
+                    <button id="share-wa-btn" style="background: #25D366; color: white; border: none; padding: 12px 25px; border-radius: 50px; cursor: pointer; font-weight: bold; font-family: 'Montserrat', sans-serif; display: inline-flex; align-items: center; gap: 8px;">
+                        Enviar no WhatsApp
                     </button>
                 </div>
 
-                <button onclick="location.reload()" style="background: none; border: 1px solid #ccc; padding: 8px 15px; cursor: pointer; border-radius: 4px; margin-top: 10px; color: #666;">
-                    Tentar Novamente
+                <button onclick="location.reload()" style="background: none; border: 1px solid #bbb; padding: 10px 20px; cursor: pointer; border-radius: 5px; margin-top: 10px; color: #777; font-size: 0.9rem;">
+                    Refazer Teste
                 </button>
             </div>
-
         </div>
     </section>
 </main>
