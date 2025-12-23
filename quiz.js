@@ -95,16 +95,23 @@ function checkAnswer(selected) {
 function showResult() {
     questionContainer.style.display = "none";
     resultContainer.style.display = "block";
+    
     let rank = "";
+    if(score === 10) rank = "Gênio (145+ QI)";
+    else if(score >= 8) rank = "Mente Brilhante (120-135 QI)";
+    else if(score >= 6) rank = "Acima da Média (100-115 QI)";
+    else if(score >= 4) rank = "Médio (90-100 QI)";
+    else rank = "Mente em Desenvolvimento";
     
-    // Escala de QI baseada em 10 questões
-    if(score === 10) rank = "Gênio (QI Estimado: 145+)";
-    else if(score >= 8) rank = "Mente Brilhante (QI Estimado: 120-135)";
-    else if(score >= 6) rank = "Acima da Média (QI Estimado: 100-115)";
-    else if(score >= 4) rank = "Médio (QI Estimado: 90-100)";
-    else rank = "Foco Necessário (Exercite mais a lógica!)";
-    
-    scoreText.innerHTML = `Acertaste <strong>${score} de 10</strong>.<br><br>Nível: <strong>${rank}</strong>`;
+    scoreText.innerHTML = `Acertaste <strong>${score} de 10</strong>.<br>Nível: <strong>${rank}</strong>`;
+
+    // Configuração do Botão de Partilha
+    const shareBtn = document.getElementById("share-wa-btn");
+    shareBtn.onclick = () => {
+        const text = `Consegui o nível "${rank}" no Teste de QI do Sabedoria Simples! Consegues bater a minha pontuação? 🤔\n\nFaz o teste aqui: ${window.location.href}`;
+        const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+        window.open(waUrl, '_blank');
+    };
 }
 
 loadQuestion();
