@@ -25,17 +25,27 @@ const quotes = [
 const quoteBox = document.getElementById("quote-box");
 const newQuoteBtn = document.getElementById("new-quote-btn");
 const shareQuoteBtn = document.getElementById("share-quote-btn");
+const quoteSound = document.getElementById("quote-sound"); // Seleciona o áudio
 
-let currentQuote = {}; // Variável para guardar a frase que está no ecrã
+let currentQuote = {}; 
 
 function getNewQuote() {
     if (!quoteBox) return;
 
+    // 1. DISPARO DO SOM
+    if (quoteSound) {
+        quoteSound.volume = 0.4; // Volume em 40% para ser agradável
+        quoteSound.currentTime = 0; // Reinicia para permitir cliques rápidos
+        quoteSound.play().catch(e => console.log("Som aguardando interação do usuário."));
+    }
+
+    // 2. ANIMAÇÃO DE SAÍDA E LIMPEZA DO BRILHO
     quoteBox.style.opacity = 0;
+    quoteBox.classList.remove("glow-effect");
     
     setTimeout(() => {
         const randomIndex = Math.floor(Math.random() * quotes.length);
-        currentQuote = quotes[randomIndex]; // Guarda a frase atual
+        currentQuote = quotes[randomIndex]; 
         
         quoteBox.innerHTML = `
             ${currentQuote.text}
@@ -45,7 +55,15 @@ function getNewQuote() {
             </small>
         `;
         
+        // 3. ANIMAÇÃO DE ENTRADA E DISPARO DO BRILHO
         quoteBox.style.opacity = 1;
+        quoteBox.classList.add("glow-effect");
+        
+        // Remove a classe após a animação (0.6s) para que possa ser disparada de novo
+        setTimeout(() => {
+            quoteBox.classList.remove("glow-effect");
+        }, 600);
+
     }, 300);
 }
 
@@ -55,15 +73,12 @@ if (shareQuoteBtn) {
         const textToShare = `"${currentQuote.text}" — ${currentQuote.author}\n\nVeja mais reflexões em: ${window.location.href}`;
         
         if (navigator.share) {
-            // Partilha Nativa (Telemóveis)
             navigator.share({
                 title: 'Sabedoria Simples',
                 text: textToShare,
                 url: window.location.href
-            }).then(() => console.log('Partilhado com sucesso'))
-              .catch((error) => console.log('Erro ao partilhar', error));
+            }).catch((error) => console.log('Erro ao partilhar', error));
         } else {
-            // Partilha via WhatsApp (Computadores/Fallback)
             const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(textToShare)}`;
             window.open(waUrl, '_blank');
         }
