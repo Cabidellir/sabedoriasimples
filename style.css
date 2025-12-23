@@ -276,3 +276,12 @@ footer a:hover {
         font-size: 1.2rem;
     }
 }
+
+
+    .quote-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap; /* Garante que no celular um fique embaixo do outro se não couber */
+        margin-top: 20px;
+    }
