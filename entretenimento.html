@@ -12,10 +12,10 @@
     <h1><a href="index.html">Sabedoria Simples</a></h1>
     <nav id="menu">
         <ul>
-            <li><a href="index.html" class="active">Início</a></li>
+            <li><a href="index.html">Início</a></li>
             <li><a href="artigos.html">Artigos</a></li>
             <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="entretenimento.html">Desafios</a></li>
+            <li><a href="entretenimento.html" class="active">Desafios</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
     </nav>
@@ -24,23 +24,33 @@
 <main>
     <section class="page-section">
         <h2 class="page-title">Exercite sua Mente</h2>
-        <p>A sabedoria também exige uma mente afiada. Teste sua capacidade de raciocínio lógico abaixo.</p>
+        <p style="text-align: center;">A sabedoria também exige uma mente afiada. Teste sua capacidade de raciocínio lógico abaixo.</p>
 
-<div id="result-container" style="display: none; text-align: center;">
-    <h3>Seu Resultado:</h3>
-    <p id="score-text" style="font-size: 1.2rem; margin-bottom: 20px;"></p>
-    
-    <div id="share-section" style="margin: 20px 0; padding: 15px; border-top: 1px solid #eee;">
-        <p style="font-size: 0.9rem; margin-bottom: 10px;">Desafie os seus amigos:</p>
-        <button id="share-wa-btn" style="background: #25D366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;">
-            Partilhar no WhatsApp
-        </button>
-    </div>
+        <div id="quiz-container" style="background: #f9f9f9; padding: 30px; border-radius: 15px; margin: 30px auto; border: 1px solid #eee; max-width: 600px;">
+            
+            <div id="question-container">
+                <h3 id="question-text" style="margin-bottom: 20px;">Carregando desafio...</h3>
+                <div id="options-container" style="display: grid; gap: 10px;">
+                    </div>
+            </div>
 
-    <button onclick="location.reload()" style="background: none; border: 1px solid #ccc; padding: 8px 15px; cursor: pointer; border-radius: 4px; margin-top: 10px;">
-        Tentar Novamente
-    </button>
-</div>
+            <div id="result-container" style="display: none; text-align: center;">
+                <h3>Seu Resultado:</h3>
+                <p id="score-text" style="font-size: 1.2rem; margin-bottom: 20px; color: var(--text);"></p>
+                
+                <div id="share-section" style="margin: 20px 0; padding: 15px; border-top: 1px solid #eee;">
+                    <p style="font-size: 0.9rem; margin-bottom: 15px;">Desafie os seus amigos:</p>
+                    <button id="share-wa-btn" style="background: #25D366; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-weight: bold; font-family: 'Montserrat', sans-serif;">
+                        Partilhar no WhatsApp
+                    </button>
+                </div>
+
+                <button onclick="location.reload()" style="background: none; border: 1px solid #ccc; padding: 8px 15px; cursor: pointer; border-radius: 4px; margin-top: 10px; color: #666;">
+                    Tentar Novamente
+                </button>
+            </div>
+
+        </div>
     </section>
 </main>
 
@@ -49,5 +59,6 @@
     <p><a href="privacidade.html" style="color: #888; text-decoration: none; font-size: 0.8rem;">Política de Privacidade</a></p>
 </footer>
 
-<script src="quiz.js"></script> </body>
+<script src="quiz.js"></script> 
+</body>
 </html>
