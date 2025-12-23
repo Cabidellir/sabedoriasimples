@@ -76,6 +76,8 @@ function loadQuestion() {
         btn.style.background = "white";
         btn.onclick = () => checkAnswer(index);
         optionsContainer.appendChild(btn);
+        const progress = ((currentQuestion) / quizData.length) * 100;
+        document.getElementById("progress-bar").style.width = progress + "%";
     });
 }
 
