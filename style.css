@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600;700&display=swap');
 
 :root {
     --bg: #ffffff;
-    --text: #444;
+    --text: #333333; /* Um pouco mais escuro para melhor contraste */
     --gold: #C6A667;
-    --light-gray: #f7f7f7;
+    --gold-dark: #a88a4e;
+    --light-gray: #f9f9f9;
+    --shadow: rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Transições suaves em tudo */
 }
 
 body {
@@ -12,27 +19,35 @@ body {
     background: var(--bg);
     font-family: 'Lora', serif;
     color: var(--text);
-    line-height: 1.6;
+    line-height: 1.8; /* Aumentado para leitura mais confortável */
 }
 
 header {
     background: var(--light-gray);
-    padding: 10px 20px;
-    border-bottom: 3px solid var(--gold);
+    padding: 30px 20px; /* Mais respiro no topo */
+    border-bottom: 1px solid #eee; /* Linha mais fina para elegância */
+    border-top: 4px solid var(--gold); /* Destaque no topo */
     text-align: center;
+}
+
+header h1 {
+    margin: 0;
 }
 
 header h1 a {
     color: var(--gold) !important;
     text-decoration: none !important;
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: -1px;
 }
 
 header p {
-    font-size: 0.95rem;
-    color: var(--text);
-    margin: 5px 0 10px;
+    font-size: 1rem;
+    color: #777;
+    margin: 8px 0 20px;
+    font-style: italic;
 }
 
 /* MENU */
@@ -41,6 +56,7 @@ header p {
     font-size: 1.8rem;
     cursor: pointer;
     color: var(--gold);
+    margin-bottom: 15px;
 }
 
 #menu ul {
@@ -48,46 +64,114 @@ header p {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 18px;
+    gap: 25px;
     justify-content: center;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--gold);
+    color: #555; /* Links neutros */
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-nav a:hover {
-    opacity: 0.7;
+nav a:hover, nav a.active {
+    color: var(--gold);
 }
 
+/* MAIN CONTENT */
 main {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
+    max-width: 800px; /* Reduzi um pouco para o texto não ficar largo demais */
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: var(--text);
+}
+
+/* CITAÇÕES (REFLEXÕES) */
 #quotes-section {
-    padding: 20px;
+    padding: 30px;
     background: var(--light-gray);
-    border-left: 4px solid var(--gold);
-    margin-bottom: 25px;
+    border-radius: 8px;
+    border-left: 5px solid var(--gold);
+    margin-bottom: 40px;
+    box-shadow: 2px 4px 10px var(--shadow);
 }
 
 #quote-box {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-style: italic;
+    color: #444;
+    margin-bottom: 15px;
 }
 
-/* Mobile */
+#new-quote-btn {
+    background: var(--gold);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+#new-quote-btn:hover {
+    background: var(--gold-dark);
+}
+
+/* ESTILO DOS CARDS DE ARTIGO */
+.article {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.article:hover {
+    box-shadow: 0 10px 20px var(--shadow);
+    transform: translateY(-3px);
+}
+
+.article h3 a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.article h3 a:hover {
+    color: var(--gold);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--light-gray);
+    margin-top: 60px;
+    border-top: 1px solid #eee;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
+    header { padding: 20px 15px; }
+    
     #menu ul {
         display: none;
         flex-direction: column;
-        text-align: center;
-        padding-top: 10px;
+        gap: 15px;
+        padding: 20px 0;
     }
 
     #menu.open ul {
@@ -95,14 +179,8 @@ main {
     }
 
     #menu-toggle {
-        display: block;
+        display: inline-block;
     }
-}
 
-footer {
-    text-align: center;
-    padding: 15px;
-    background: var(--light-gray);
-    border-top: 3px solid var(--gold);
-    font-size: .9rem;
+    header h1 a { font-size: 1.8rem; }
 }
