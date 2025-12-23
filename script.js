@@ -1,91 +1,82 @@
-/**
- * Sabedoria Simples - Script Principal Otimizado
- */
+// --- SISTEMA DE CITAÇÕES (REFLEXÃO DO MOMENTO) ---
+const quotes = [
+    // As 10 iniciais
+    { text: "A felicidade de sua vida depende da qualidade de seus pensamentos.", author: "Marco Aurélio" },
+    { text: "Não é que temos pouco tempo, é que perdemos muito dele.", author: "Sêneca" },
+    { text: "A riqueza não consiste em ter grandes posses, mas em ter poucas necessidades.", author: "Epicteto" },
+    { text: "O homem que move montanhas começa carregando pedras pequenas.", author: "Provérbio Chinês" },
+    { text: "A vida é muito curta para ser pequena.", author: "Benjamin Disraeli" },
+    { text: "A sabedoria começa na reflexão.", author: "Sócrates" },
+    { text: "O que não nos mata, torna-nos mais fortes.", author: "Friedrich Nietzsche" },
+    { text: "Onde quer que o seu pensamento esteja, lá estará a sua vida.", author: "Desconhecido" },
+    { text: "Viver é a coisa mais rara do mundo. A maioria das pessoas apenas existe.", author: "Oscar Wilde" },
+    { text: "A paz vem de dentro. Não a procure à sua volta.", author: "Buda" },
 
-document.addEventListener("DOMContentLoaded", () => {
+    // 10 Novas Frases
+    { text: "Aquele que conquista a si mesmo é o guerreiro mais poderoso.", author: "Confúcio" },
+    { text: "O destino conduz quem quer e arrasta quem não quer.", author: "Cleantes de Assos" },
+    { text: "Não procure que os eventos aconteçam como deseja, mas deseje que aconteçam como acontecem.", author: "Epicteto" },
+    { text: "A melhor vingança é não ser como o seu inimigo.", author: "Marco Aurélio" },
+    { text: "Onde há amor pela humanidade, há amor pela arte da cura e da sabedoria.", author: "Hipócrates" },
+    { text: "Coragem não é a ausência de medo, mas o julgamento de que algo é mais importante que o medo.", author: "Ambrose Redmoon" },
+    { text: "Somos o que fazemos repetidamente. A excelência, portanto, não é um ato, mas um hábito.", author: "Aristóteles" },
+    { text: "O segredo da mudança é focar toda a sua energia não em lutar contra o velho, mas em construir o novo.", author: "Sócrates" },
+    { text: "Nada é tão terrível para quem não teme a morte.", author: "Sêneca" },
+    { text: "Se queres ser amado, ama.", author: "Hecatão de Rodes" }
+];
+
+const quoteBox = document.getElementById("quote-box");
+const newQuoteBtn = document.getElementById("new-quote-btn");
+
+function getNewQuote() {
+    if (!quoteBox) return; // Segurança caso a seção não exista na página
+
+    // Animação suave de saída
+    quoteBox.style.opacity = 0;
     
-    // --- LÓGICA DAS FRASES (REFLEXÕES) ---
-    const quotes = [
-        "A felicidade da sua vida depende da qualidade dos seus pensamentos. — Marco Aurélio",
-        "Dificuldades fortalecem a mente, assim como o trabalho fortalece o corpo. — Sêneca",
-        "Quem teme a dor, sofre antes de sofrer. — Sêneca",
-        "Você tem poder sobre sua mente, não sobre os acontecimentos. — Marco Aurélio",
-        "Primeiro diga a si o que você seria; depois, faça o que precisa fazer. — Epicteto",
-        "A sorte é o que acontece quando a preparação encontra a oportunidade. — Sêneca",
-        "Não espere que os eventos aconteçam como você deseja. Deseje que eles aconteçam como acontecem. — Epicteto",
-        "A vida é muito curta para ser pequena. — Benjamin Disraeli",
-        "Onde quer que haja um ser humano, há uma oportunidade para a bondade. — Sêneca"
-    ];
-
-    // Cores suaves para o fundo da seção de frases (Dinamismo Visual)
-    const softColors = ['#fdfdfd', '#fcf9f2', '#f2f7f1', '#f1f4f7', '#f9f6f1'];
-
-    const quoteBox = document.getElementById("quote-box");
-    const newQuoteBtn = document.getElementById("new-quote-btn");
-    const quotesSection = document.getElementById("quotes-section");
-
-    if (quoteBox && newQuoteBtn) {
-        function newQuote() {
-            // Efeito de fade out
-            quoteBox.style.opacity = 0;
-            
-            setTimeout(() => {
-                // Sorteia nova frase
-                const quoteIndex = Math.floor(Math.random() * quotes.length);
-                quoteBox.textContent = quotes[quoteIndex];
-
-                // Sorteia nova cor de fundo sutil (se a seção existir)
-                if (quotesSection) {
-                    const colorIndex = Math.floor(Math.random() * softColors.length);
-                    quotesSection.style.backgroundColor = softColors[colorIndex];
-                }
-
-                // Fade in
-                quoteBox.style.opacity = 1;
-            }, 300);
-        }
-
-        // Configuração de transição suave
-        quoteBox.style.transition = "opacity 0.4s ease";
-        if (quotesSection) quotesSection.style.transition = "background-color 0.8s ease";
+    setTimeout(() => {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const selectedQuote = quotes[randomIndex];
         
-        newQuote();
-        newQuoteBtn.addEventListener("click", newQuote);
-    }
+        // Insere o texto e o autor formatado
+        quoteBox.innerHTML = `
+            ${selectedQuote.text}
+            <br>
+            <small style="font-size: 0.9rem; color: #888; font-style: normal; display: block; margin-top: 15px; font-family: 'Montserrat', sans-serif;">
+                — ${selectedQuote.author}
+            </small>
+        `;
+        
+        // Animação suave de entrada
+        quoteBox.style.opacity = 1;
+    }, 300);
+}
 
-    // --- MENU MOBILE ---
-    const menuToggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
+// Inicializa a primeira frase e o evento do botão
+if (newQuoteBtn) {
+    newQuoteBtn.addEventListener("click", getNewQuote);
+    getNewQuote(); 
+}
 
-    if (menuToggle && menu) {
-        menuToggle.addEventListener("click", (e) => {
-            e.stopPropagation();
-            menu.classList.toggle("open");
-        });
+// --- CONTROLE DO MENU MOBILE ---
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
 
-        document.addEventListener("click", (e) => {
-            if (menu.classList.contains("open") && !menu.contains(e.target) && e.target !== menuToggle) {
-                menu.classList.remove("open");
-            }
-        });
-    }
-
-    // --- EFEITOS DINÂMICOS DE SCROLL ---
-    const header = document.querySelector('header');
-    
-    // Throttle simples para performance no scroll
-    let isScrolling;
-    window.addEventListener('scroll', () => {
-        window.clearTimeout(isScrolling);
-        isScrolling = setTimeout(() => {
-            if (window.scrollY > 50) {
-                header.style.boxShadow = "0 2px 15px rgba(0,0,0,0.08)";
-                header.style.padding = "15px 20px"; // Header encolhe um pouco ao rolar
-            } else {
-                header.style.boxShadow = "none";
-                header.style.padding = "30px 20px"; // Volta ao tamanho normal
-            }
-        }, 50);
+if (menuToggle && menu) {
+    menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+        // Troca o ícone de hambúrguer (☰) para X (✕)
+        menuToggle.innerHTML = menu.classList.contains("open") ? "✕" : "☰";
     });
+}
 
+// --- FECHAR MENU AO CLICAR EM UM LINK (MELHORIA DE UX) ---
+const navLinks = document.querySelectorAll("#menu a");
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        if (menu.classList.contains("open")) {
+            menu.classList.remove("open");
+            menuToggle.innerHTML = "☰";
+        }
+    });
 });
