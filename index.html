@@ -1,119 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3375728934205202"
-        crossorigin="anonymous"></script>
-    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3375728934205202" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabedoria Simples | Estoicismo, Minimalismo e Filosofia Prática</title>
-    
-    <meta name="description" content="Explore lições profundas de estoicismo e minimalismo mental. Artigos detalhados sobre Marco Aurélio, Sêneca e Schopenhauer para uma vida com mais clareza.">
-    <meta name="keywords" content="estoicismo, minimalismo, sabedoria, mentalidade, marco aurelio, schopenhauer, paz interior, filosofia aplicada">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta name="theme-color" content="#C6A667">
-
+    <title>Sabedoria Simples | Mistérios da Mente e Filosofia</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Ajustes Estilo Portal (Estilo Mistérios do Mundo) */
+        :root { --gold: #C6A667; --dark: #1a1a1a; }
+        
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portal-card {
+            background: #fff;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .portal-card:hover {
+            border-bottom: 3px solid var/(--gold);
+            transform: translateY(-5px);
+        }
+
+        .portal-thumbnail {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #eee;
+        }
+
+        .portal-content { padding: 15px 0; }
+        
+        .portal-tag {
+            color: var(--gold);
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .portal-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 8px 0;
+            line-height: 1.3;
+        }
+
+        .portal-excerpt {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Hero Section - O Destaque Principal */
+        .hero-portal {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 768px) { .hero-portal { grid-template-columns: 1fr; } }
+
+        .main-featured {
+            position: relative;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .main-featured img { width: 100%; height: 100%; object-fit: cover; }
+
+        .main-featured-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 40px 20px 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-    <h1><a href="index.html" class="logo-link">Sabedoria Simples</a></h1>
-    <p>Menos complicação. Mais sabedoria.</p>
-
-    <div id="menu-toggle">☰</div>
-    <nav id="menu">
-        <ul>
-            <li><a href="index.html" class="active">Início</a></li>
-            <li><a href="artigos.html">Artigos</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="entretenimento.html">Desafios</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+        <h1><a href="index.html" class="logo-link">Sabedoria Simples</a></h1>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="artigos.html">Artigos</a></li>
+                <li><a href="entretenimento.html">Desafios</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <main>
-    <section id="intro-text" style="text-align: center; padding: 40px 20px; max-width: 800px; margin: 0 auto;">
-        <h2>Busque a Clareza na Filosofia Milenar</h2>
-        <p>Bem-vindo ao Sabedoria Simples. Nosso objetivo é traduzir os ensinamentos do <strong>Estoicismo</strong> e do <strong>Minimalismo</strong> para os desafios da vida moderna. Aqui, você encontrará reflexões profundas para acalmar a mente e focar no que realmente importa.</p>
-    </section>
-
-    <section id="quotes-section">
-        <h2>Reflexão do Momento</h2>
-        <div class="quote-container">
-            <span class="quote-icon-left">“</span>
-            <div id="quote-box"></div>
-            <span class="quote-icon-right">”</span>
-        </div>
+    <section class="hero-portal">
+        <a href="posts/artigo-marco-aurelio.html" class="main-featured">
+            <img src="assets/img/marco-aurelio.jpg" alt="Marco Aurelio">
+            <div class="main-featured-overlay">
+                <span class="portal-tag">Filosofia Prática</span>
+                <h2 style="font-size: 2rem;">A Ciência da Dieta Mental: Como Marco Aurélio Protegia sua Paz</h2>
+            </div>
+        </a>
         
-        <div class="quote-buttons">
-            <button id="new-quote-btn">Nova Reflexão</button>
-            <button id="share-quote-btn" style="background: #25D366; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.8rem; margin-top: 10px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 8px;">
-                Compartilhar
-            </button>
-        </div>
-    </section>
-
-    <section id="featured-article">
-        <div class="featured-badge">Artigo em Destaque</div>
-        <div class="featured-content">
-            <a href="posts/artigo-marco-aurelio.html">
-                <h2>A Ciência da Dieta Mental: A Lição de Marco Aurélio</h2>
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+            <a href="posts/ansiedade-o-retorno-ao-presente.html" class="portal-card">
+                <img src="assets/img/ansiedade.jpg" class="portal-thumbnail" style="height: 150px;">
+                <div class="portal-content">
+                    <span class="portal-tag">Saúde Mental</span>
+                    <h3 class="portal-title" style="font-size: 1rem;">O Retorno ao Presente</h3>
+                </div>
             </a>
-            <p>Sua felicidade depende da qualidade dos seus pensamentos. Aprenda como o imperador filósofo protegia sua mente de distrações e negatividade.</p>
-            <a href="posts/artigo-marco-aurelio.html" class="btn-read">Ler Guia Completo →</a>
+            <a href="posts/como-ganhar-uma-discussao.html" class="portal-card">
+                <img src="assets/img/schopenhauer.jpg" class="portal-thumbnail" style="height: 150px;">
+                <div class="portal-content">
+                    <span class="portal-tag">Psicologia</span>
+                    <h3 class="portal-title" style="font-size: 1rem;">A Dialética de Schopenhauer</h3>
+                </div>
+            </a>
         </div>
     </section>
 
-    <section id="articles-grid">
-        <h3>Explorar por Temas</h3>
-        <div class="grid-container">
-            <article class="mini-card">
-                <div class="card-tag">Psicologia</div>
-                <a href="posts/como-ganhar-uma-discussao.html"><h4>A Dialética de Schopenhauer</h4></a>
-                <p>Proteja sua razão em debates e discussões.</p>
-            </article>
+    <h2 style="max-width: 1200px; margin: 40px auto 10px; padding: 0 20px; font-family: 'Montserrat';">Últimas Descobertas</h2>
+    <section class="portal-grid">
+        
+        <a href="posts/valor-do-silencio.html" class="portal-card">
+            <img src="assets/img/silencio.jpg" class="portal-thumbnail">
+            <div class="portal-content">
+                <span class="portal-tag">Autoconhecimento</span>
+                <h3 class="portal-title">O Poder Oculto do Silêncio</h3>
+                <p class="portal-excerpt">Por que a quietude é a ferramenta mais poderosa dos líderes modernos.</p>
+            </div>
+        </a>
 
-            <article class="mini-card">
-                <div class="card-tag">Minimalismo</div>
-                <a href="posts/minimalismo-mental.html"><h4>Destralhando a Mente</h4></a>
-                <p>Como reduzir o ruído interno hoje mesmo.</p>
-            </article>
+        <a href="posts/sabedoria-de-ser-imperfeito.html" class="portal-card">
+            <img src="assets/img/kintsugi.jpg" class="portal-thumbnail">
+            <div class="portal-content">
+                <span class="portal-tag">Bem-estar</span>
+                <h3 class="portal-title">A Arte Japonesa do Kintsugi</h3>
+                <p class="portal-excerpt">Como transformar suas cicatrizes emocionais em ouro e resiliência.</p>
+            </div>
+        </a>
 
-            <article class="mini-card">
-                <div class="card-tag">Ansiedade</div>
-                <a href="posts/ansiedade-o-retorno-ao-presente.html"><h4>Vencendo a Ansiedade</h4></a>
-                <p>O retorno estoico ao momento presente.</p>
-            </article>
-            
-            <article class="mini-card">
-                <div class="card-tag">Autodomínio</div>
-                <a href="posts/poder-mente-estoica.html"><h4>Fortaleza Interior</h4></a>
-                <p>Como construir uma mente inabalável.</p>
-            </article>
-        </div>
+        <a href="posts/minimalismo-mental.html" class="portal-card">
+            <img src="assets/img/minimalismo.jpg" class="portal-thumbnail">
+            <div class="portal-content">
+                <span class="portal-tag">Vida Simples</span>
+                <h3 class="portal-title">Destralhando a Mente</h3>
+                <p class="portal-excerpt">Aprenda a remover o ruído cognitivo e focar no que é essencial.</p>
+            </div>
+        </a>
 
-        <div class="view-all">
-            <a href="artigos.html">Ver todos os 13 artigos detalhados</a>
-        </div>
     </section>
 </main>
 
 <footer>
-    <p>© 2026 Sabedoria Simples — Todos os direitos reservados.</p>
-    <div class="footer-links" style="margin-top: 10px;">
-        <a href="privacidade.html" style="color: #888; text-decoration: none; font-size: 0.8rem; margin: 0 10px;">Política de Privacidade</a>
-        <a href="termos.html" style="color: #888; text-decoration: none; font-size: 0.8rem; margin: 0 10px;">Termos de Uso</a>
-    </div>
+    <p>© 2026 Sabedoria Simples — <a href="privacidade.html">Privacidade</a></p>
 </footer>
 
-<audio id="quote-sound" src="assets/som-reflexao.mp3" preload="auto"></audio>
-<script src="script.js"></script>
 </body>
 </html>
