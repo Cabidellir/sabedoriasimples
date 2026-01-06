@@ -7,7 +7,6 @@
     <meta name="description" content="Explore nossa coleção completa de artigos sobre estoicismo, minimalismo digital, saúde mental e filosofia prática para a vida moderna.">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Estilos específicos para a listagem de artigos */
         .archive-container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
         .archive-item { 
             display: flex; 
@@ -25,26 +24,35 @@
             font-weight: bold; 
             margin-bottom: 5px;
         }
-        .archive-item h2 { margin: 5px 0; font-size: 1.5rem; }
+        .archive-item h2 { margin: 5px 0; font-size: 1.5rem; line-height: 1.3; }
         .archive-item h2 a { text-decoration: none; color: #333; }
         .archive-item p { color: #666; font-size: 0.95rem; line-height: 1.6; margin-top: 10px; }
-        .read-time { font-size: 0.8rem; color: #999; margin-top: 5px; }
+        
+        /* Estilo para Meta Informações (Data e Tempo) */
+        .post-info { 
+            font-size: 0.8rem; 
+            color: #999; 
+            margin-top: 8px; 
+            display: flex; 
+            gap: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1><a href="../index.html" class="logo-link">Sabedoria Simples</a></h1>
+    <h1><a href="index.html" class="logo-link">Sabedoria Simples</a></h1>
     <p>Menos complicação. Mais sabedoria.</p>
 
     <div id="menu-toggle">☰</div>
     <nav id="menu">
         <ul>
-            <li><a href="../index.html" class="active">Início</a></li>
-            <li><a href="../artigos.html">Artigos</a></li>
-            <li><a href="../sobre.html">Sobre</a></li>
-            <li><a href="../entretenimento.html">Desafios</a></li>
-            <li><a href="../contato.html">Contato</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="artigos.html" class="active">Artigos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="entretenimento.html">Desafios</a></li>
+            <li><a href="contato.html">Contato</a></li>
         </ul>
     </nav>
 </header>
@@ -52,100 +60,139 @@
 <main class="archive-container">
     <header style="text-align: center; margin-bottom: 50px;">
         <h1 style="font-size: 2.5rem;">Biblioteca de Sabedoria</h1>
-        <p style="color: #777;">Explore nossos artigos aprofundados sobre a arte de viver com propósito e clareza.</p>
+        <p style="color: #777;">Uma cronologia de reflexões para uma vida equilibrada.</p>
     </header>
 
     <section class="articles-list">
 
         <article class="archive-item">
-            <span class="category">Filosofia Prática</span>
-            <h2><a href="posts/artigo-marco-aurelio.html">A Ciência da Dieta Mental: Lições de Marco Aurélio</a></h2>
-            <p>Descubra como o imperador filósofo protegia sua mente de distrações e como você pode aplicar a curadoria de pensamentos hoje.</p>
-            <span class="read-time">6 min de leitura</span>
-        </article>
-
-        <article class="archive-item">
-            <span class="category">Saúde Mental</span>
-            <h2><a href="posts/ansiedade-o-retorno-ao-presente.html">Ansiedade: O Guia Definitivo para o Retorno ao Presente</a></h2>
-            <p>Aprenda a âncora do momento presente e a Dicotomia do Controle para silenciar as preocupações com o futuro.</p>
-            <span class="read-time">8 min de leitura</span>
-        </article>
-
-        <article class="archive-item">
-            <span class="category">Psicologia e Lógica</span>
-            <h2><a href="posts/como-ganhar-uma-discussao.html">Como Ganhar uma Discussão: As Lições de Arthur Schopenhauer</a></h2>
-            <p>Um mergulho na dialética erística para identificar falácias e proteger sua razão em debates complexos.</p>
-            <span class="read-time">9 min de leitura</span>
-        </article>
-
-        <article class="archive-item">
-            <span class="category">Filosofia de Vida</span>
-            <h2><a href="posts/deixar-ir-o-controle.html">Deixar Ir o Controle: O Segredo para uma Vida Sem Angústia</a></h2>
-            <p>A lição de Epicteto sobre focar apenas no que depende de nós e encontrar a verdadeira liberdade interna.</p>
-            <span class="read-time">8 min de leitura</span>
-        </article>
-
-        <article class="archive-item">
-            <span class="category">Minimalismo Digital</span>
-            <h2><a href="posts/filtro-da-atencao.html">O Filtro da Atenção: A Moeda Mais Valiosa da Era Moderna</a></h2>
-            <p>Como blindar sua mente contra o sequestro digital e recuperar o foco em um mundo de distrações infinitas.</p>
-            <span class="read-time">8 min de leitura</span>
-        </article>
-
-        <article class="archive-item">
-            <span class="category">Vida Simples</span>
-            <h2><a href="posts/minimalismo-mental.html">Minimalismo Mental: Como Destralhar a sua Mente</a></h2>
-            <p>Vá além do desapego material e aprenda a remover o excesso de ruído cognitivo para uma vida mais leve.</p>
-            <span class="read-time">9 min de leitura</span>
-        </article>
-
-        <article class="archive-item">
-            <span class="category">Desenvolvimento Pessoal</span>
-            <h2><a href="posts/pequenas-mudancas-grandes-transformacoes.html">Pequenas Mudanças, Grandes Transformações: O Poder do 1%</a></h2>
-            <p>A ciência dos hábitos e a consistência estoica aplicadas para gerar resultados extraordinários a longo prazo.</p>
-            <span class="read-time">8 min de leitura</span>
-        </article>
-
-        <article class="archive-item">
-            <span class="category">Inteligência Emocional</span>
-            <h2><a href="posts/peso-invisivel-das-expectativas.html">O Peso Invisível das Expectativas: Viver para Si Mesmo</a></h2>
-            <p>Como se libertar da pressão social e do julgamento alheio usando o Locus de Controle Interno.</p>
-            <span class="read-time">9 min de leitura</span>
-        </article>
-
-        <article class="archive-item">
-            <span class="category">Filosofia de Vida</span>
-            <h2><a href="posts/poder-mente-estoica.html">O Poder da Mente Estoica: Construindo uma Fortaleza Interior</a></h2>
-            <p>Desenvolva resiliência inabalável através dos quatro pilares da virtude: Sabedoria, Justiça, Coragem e Temperança.</p>
-            <span class="read-time">10 min de leitura</span>
-        </article>
-
-        <article class="archive-item">
-            <span class="category">Saúde Mental</span>
-            <h2><a href="posts/sabedoria-de-ser-imperfeito.html">A Sabedoria de Ser Imperfeito: O Fim da Tirania do Perfeccionismo</a></h2>
-            <p>A arte do Kintsugi aplicada à vida: como aceitar suas falhas e transformá-las em força e beleza.</p>
-            <span class="read-time">8 min de leitura</span>
-        </article>
-
-        <article class="archive-item">
             <span class="category">Autoconhecimento</span>
             <h2><a href="posts/valor-do-silencio.html">O Valor do Silêncio: Por Que a Quietude é a Sua Melhor Estratégia</a></h2>
             <p>Descubra como o silêncio regenera o cérebro e oferece a clareza necessária para as grandes decisões.</p>
-            <span class="read-time">8 min de leitura</span>
-        </article>
-
-        <article class="archive-item">
-            <span class="category">Reflexão Profunda</span>
-            <h2><a href="posts/o-que-realmente-importa.html">O Que Realmente Importa: Priorizando o Essencial</a></h2>
-            <p>Use o teste do Memento Mori para distinguir entre o barulho da rotina e os valores que dão sentido à vida.</p>
-            <span class="read-time">8 min de leitura</span>
+            <div class="post-info">
+                <span>05 de Janeiro, 2026</span>
+                <span>• 8 min de leitura</span>
+            </div>
         </article>
 
         <article class="archive-item">
             <span class="category">Produtividade Pessoal</span>
             <h2><a href="posts/arte-de-acordar-para-a-vida.html">A Arte de Acordar para a Vida: Manhãs com Propósito</a></h2>
             <p>Vença a preguiça matinal e comece seu dia com a intenção e a disciplina de um imperador romano.</p>
-            <span class="read-time">7 min de leitura</span>
+            <div class="post-info">
+                <span>30 de Dezembro, 2025</span>
+                <span>• 7 min de leitura</span>
+            </div>
+        </article>
+
+        <article class="archive-item">
+            <span class="category">Saúde Mental</span>
+            <h2><a href="posts/sabedoria-de-ser-imperfeito.html">A Sabedoria de Ser Imperfeito: O Fim da Tirania do Perfeccionismo</a></h2>
+            <p>A arte do Kintsugi aplicada à vida: como aceitar suas falhas e transformá-las em força e beleza.</p>
+            <div class="post-info">
+                <span>22 de Dezembro, 2025</span>
+                <span>• 8 min de leitura</span>
+            </div>
+        </article>
+
+        <article class="archive-item">
+            <span class="category">Reflexão Profunda</span>
+            <h2><a href="posts/o-que-realmente-importa.html">O Que Realmente Importa: Priorizando o Essencial</a></h2>
+            <p>Use o teste do Memento Mori para distinguir entre o barulho da rotina e os valores que dão sentido à vida.</p>
+            <div class="post-info">
+                <span>15 de Dezembro, 2025</span>
+                <span>• 8 min de leitura</span>
+            </div>
+        </article>
+
+        <article class="archive-item">
+            <span class="category">Desenvolvimento Pessoal</span>
+            <h2><a href="posts/pequenas-mudancas-grandes-transformacoes.html">Pequenas Mudanças, Grandes Transformações: O Poder do 1%</a></h2>
+            <p>A ciência dos hábitos e a consistência estoica aplicadas para gerar resultados extraordinários a longo prazo.</p>
+            <div class="post-info">
+                <span>08 de Dezembro, 2025</span>
+                <span>• 8 min de leitura</span>
+            </div>
+        </article>
+
+        <article class="archive-item">
+            <span class="category">Inteligência Emocional</span>
+            <h2><a href="posts/peso-invisivel-das-expectativas.html">O Peso Invisível das Expectativas: Viver para Si Mesmo</a></h2>
+            <p>Como se libertar da pressão social e do julgamento alheio usando o Locus de Controle Interno.</p>
+            <div class="post-info">
+                <span>01 de Dezembro, 2025</span>
+                <span>• 9 min de leitura</span>
+            </div>
+        </article>
+
+        <article class="archive-item">
+            <span class="category">Filosofia de Vida</span>
+            <h2><a href="posts/poder-mente-estoica.html">O Poder da Mente Estoica: Construindo uma Fortaleza Interior</a></h2>
+            <p>Desenvolva resiliência inabalável através dos quatro pilares da virtude: Sabedoria, Justiça, Coragem e Temperança.</p>
+            <div class="post-info">
+                <span>24 de Novembro, 2025</span>
+                <span>• 10 min de leitura</span>
+            </div>
+        </article>
+
+        <article class="archive-item">
+            <span class="category">Vida Simples</span>
+            <h2><a href="posts/minimalismo-mental.html">Minimalismo Mental: Como Destralhar a sua Mente</a></h2>
+            <p>Vá além do desapego material e aprenda a remover o excesso de ruído cognitivo para uma vida mais leve.</p>
+            <div class="post-info">
+                <span>17 de Novembro, 2025</span>
+                <span>• 9 min de leitura</span>
+            </div>
+        </article>
+
+        <article class="archive-item">
+            <span class="category">Minimalismo Digital</span>
+            <h2><a href="posts/filtro-da-atencao.html">O Filtro da Atenção: A Moeda Mais Valiosa da Era Moderna</a></h2>
+            <p>Como blindar sua mente contra o sequestro digital e recuperar o foco em um mundo de distrações infinitas.</p>
+            <div class="post-info">
+                <span>10 de Novembro, 2025</span>
+                <span>• 8 min de leitura</span>
+            </div>
+        </article>
+
+        <article class="archive-item">
+            <span class="category">Filosofia de Vida</span>
+            <h2><a href="posts/deixar-ir-o-controle.html">Deixar Ir o Controle: O Segredo para uma Vida Sem Angústia</a></h2>
+            <p>A lição de Epicteto sobre focar apenas no que depende de nós e encontrar a verdadeira liberdade interna.</p>
+            <div class="post-info">
+                <span>03 de Novembro, 2025</span>
+                <span>• 8 min de leitura</span>
+            </div>
+        </article>
+
+        <article class="archive-item">
+            <span class="category">Psicologia e Lógica</span>
+            <h2><a href="posts/como-ganhar-uma-discussao.html">Como Ganhar uma Discussão: As Lições de Arthur Schopenhauer</a></h2>
+            <p>Um mergulho na dialética erística para identificar falácias e proteger sua razão em debates complexos.</p>
+            <div class="post-info">
+                <span>27 de Outubro, 2025</span>
+                <span>• 9 min de leitura</span>
+            </div>
+        </article>
+
+        <article class="archive-item">
+            <span class="category">Saúde Mental</span>
+            <h2><a href="posts/ansiedade-o-retorno-ao-presente.html">Ansiedade: O Guia Definitivo para o Retorno ao Presente</a></h2>
+            <p>Aprenda a âncora do momento presente e a Dicotomia do Controle para silenciar as preocupações com o futuro.</p>
+            <div class="post-info">
+                <span>20 de Outubro, 2025</span>
+                <span>• 8 min de leitura</span>
+            </div>
+        </article>
+
+        <article class="archive-item">
+            <span class="category">Filosofia Prática</span>
+            <h2><a href="posts/artigo-marco-aurelio.html">A Ciência da Dieta Mental: Lições de Marco Aurélio</a></h2>
+            <p>Descubra como o imperador filósofo protegia sua mente de distrações e como você pode aplicar a curadoria de pensamentos hoje.</p>
+            <div class="post-info">
+                <span>13 de Outubro, 2025</span>
+                <span>• 8 min de leitura</span>
+            </div>
         </article>
 
     </section>
