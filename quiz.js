@@ -65,7 +65,6 @@ function loadQuestion() {
     questionText.innerText = data.question;
     optionsContainer.innerHTML = "";
     
-    // Atualiza a barra de progresso (FORA do loop dos botões)
     const progressBar = document.getElementById("progress-bar");
     if (progressBar) {
         const progress = (currentQuestion / quizData.length) * 100;
@@ -75,16 +74,8 @@ function loadQuestion() {
     data.options.forEach((opt, index) => {
         const btn = document.createElement("button");
         btn.innerText = opt;
-        btn.style.padding = "12px";
-        btn.style.cursor = "pointer";
-        btn.style.border = "1px solid #C6A667";
-        btn.style.background = "white";
-        btn.style.borderRadius = "5px";
-        btn.style.transition = "0.2s";
-        
-        // Efeito simples de hover via JS
-        btn.onmouseover = () => btn.style.background = "#f9f6f0";
-        btn.onmouseout = () => btn.style.background = "white";
+        // Usando a classe CSS que definimos no entretenimento.html
+        btn.classList.add("quiz-option");
         
         btn.onclick = () => checkAnswer(index);
         optionsContainer.appendChild(btn);
@@ -92,25 +83,35 @@ function loadQuestion() {
 }
 
 function checkAnswer(selected) {
-    if (selected === quizData[currentQuestion].answer) {
+    const buttons = document.querySelectorAll(".quiz-option");
+    const correctIndex = quizData[currentQuestion].answer;
+
+    // Feedback Visual
+    if (selected === correctIndex) {
+        buttons[selected].classList.add("correct");
         score++;
-    }
-    
-    currentQuestion++;
-    if (currentQuestion < quizData.length) {
-        loadQuestion();
     } else {
-        // Garante que a barra chegue a 100% no fim
-        const progressBar = document.getElementById("progress-bar");
-        if (progressBar) progressBar.style.width = "100%";
-        showResult();
+        buttons[selected].classList.add("wrong");
+        buttons[correctIndex].classList.add("correct");
     }
+
+    // Trava os botões para não clicar duas vezes
+    buttons.forEach(b => b.disabled = true);
+
+    setTimeout(() => {
+        currentQuestion++;
+        if (currentQuestion < quizData.length) {
+            loadQuestion();
+        } else {
+            const progressBar = document.getElementById("progress-bar");
+            if (progressBar) progressBar.style.width = "100%";
+            showResult();
+        }
+    }, 1200); // Pequena pausa para o usuário ver se acertou
 }
 
 function showResult() {
     questionContainer.style.display = "none";
-    
-    // Esconder a barra de progresso no resultado para ficar mais limpo
     const progressContainer = document.getElementById("progress-bar-container");
     if (progressContainer) progressContainer.style.display = "none";
 
@@ -123,12 +124,12 @@ function showResult() {
     else if(score >= 4) rank = "Médio (90-100 QI)";
     else rank = "Mente em Desenvolvimento";
     
-    scoreText.innerHTML = `Acertaste <strong>${score} de 10</strong>.<br>Nível: <strong>${rank}</strong>`;
+    scoreText.innerHTML = `Acertaste <strong>${score} de 10</strong>.<br><br>Nível: <span style="color: #C6A667; font-size: 1.5rem;">${rank}</span>`;
 
     const shareBtn = document.getElementById("share-wa-btn");
     if (shareBtn) {
         shareBtn.onclick = () => {
-            const text = `Consegui o nível "${rank}" no Teste de QI do Sabedoria Simples! Consegues bater a minha pontuação? 🤔\n\nFaz o teste aqui: ${window.location.href}`;
+            const text = `Consegui o nível "${rank}" no Teste de QI do Sabedoria Simples! Consegues bater a minha pontuação? 🤔\n\nFaz o teste aqui: https://cabidellir.github.io/sabedoriasimples/entretenimento.html`;
             const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
             window.open(waUrl, '_blank');
         };
