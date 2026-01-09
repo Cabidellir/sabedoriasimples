@@ -1,0 +1,12 @@
+# Redirecionar caminhos antigos do GitHub Pages para a raiz do Netlify
+/sabedoriasimples/* /:splat  301
+
+# Forçar HTTPS e garantir que URLs sem .html funcionem (Clean URLs)
+/index      /index.html      200
+/artigos    /artigos.html    200
+/sobre      /sobre.html      200
+/contato    /contato.html    200
+/entretenimento /entretenimento.html 200
+
+# Exemplo de redirecionamento para posts (caso mude a estrutura no futuro)
+/posts/* /posts/:splat    200
