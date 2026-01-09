@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Ajustes Estilo Portal (Estilo Mistérios do Mundo) */
         :root { --gold: #C6A667; --dark: #1a1a1a; }
         
         .portal-grid {
@@ -33,7 +32,7 @@
         }
 
         .portal-card:hover {
-            border-bottom: 3px solid var/(--gold);
+            border-bottom: 3px solid var(--gold);
             transform: translateY(-5px);
         }
 
@@ -68,7 +67,7 @@
             line-height: 1.5;
         }
 
-        /* Hero Section - O Destaque Principal */
+        /* Hero Section Dinâmico */
         .hero-portal {
             max-width: 1200px;
             margin: 20px auto;
@@ -76,6 +75,7 @@
             grid-template-columns: 2fr 1fr;
             gap: 20px;
             padding: 0 20px;
+            min-height: 450px;
         }
 
         @media (max-width: 768px) { .hero-portal { grid-template-columns: 1fr; } }
@@ -85,6 +85,8 @@
             height: 450px;
             overflow: hidden;
             border-radius: 4px;
+            display: block;
+            text-decoration: none;
         }
 
         .main-featured img { width: 100%; height: 100%; object-fit: cover; }
@@ -117,69 +119,77 @@
 </header>
 
 <main>
-    <section class="hero-portal">
-        <a href="posts/artigo-marco-aurelio.html" class="main-featured">
-            <img src="assets/img/marco-aurelio.jpg" alt="Marco Aurelio">
-            <div class="main-featured-overlay">
-                <span class="portal-tag">Filosofia Prática</span>
-                <h2 style="font-size: 2rem;">A Ciência da Dieta Mental: Como Marco Aurélio Protegia sua Paz</h2>
-            </div>
-        </a>
-        
-        <div style="display: flex; flex-direction: column; gap: 20px;">
-            <a href="posts/ansiedade-o-retorno-ao-presente.html" class="portal-card">
-                <img src="assets/img/ansiedade.jpg" class="portal-thumbnail" style="height: 150px;">
-                <div class="portal-content">
-                    <span class="portal-tag">Saúde Mental</span>
-                    <h3 class="portal-title" style="font-size: 1rem;">O Retorno ao Presente</h3>
-                </div>
-            </a>
-            <a href="posts/como-ganhar-uma-discussao.html" class="portal-card">
-                <img src="assets/img/schopenhauer.jpg" class="portal-thumbnail" style="height: 150px;">
-                <div class="portal-content">
-                    <span class="portal-tag">Psicologia</span>
-                    <h3 class="portal-title" style="font-size: 1rem;">A Dialética de Schopenhauer</h3>
-                </div>
-            </a>
-        </div>
-    </section>
+    <section class="hero-portal" id="hero-area">
+        </section>
 
     <h2 style="max-width: 1200px; margin: 40px auto 10px; padding: 0 20px; font-family: 'Montserrat';">Últimas Descobertas</h2>
-    <section class="portal-grid">
-        
-        <a href="posts/valor-do-silencio.html" class="portal-card">
-            <img src="assets/img/silencio.jpg" class="portal-thumbnail">
-            <div class="portal-content">
-                <span class="portal-tag">Autoconhecimento</span>
-                <h3 class="portal-title">O Poder Oculto do Silêncio</h3>
-                <p class="portal-excerpt">Por que a quietude é a ferramenta mais poderosa dos líderes modernos.</p>
-            </div>
-        </a>
-
-        <a href="posts/sabedoria-de-ser-imperfeito.html" class="portal-card">
-            <img src="assets/img/kintsugi.jpg" class="portal-thumbnail">
-            <div class="portal-content">
-                <span class="portal-tag">Bem-estar</span>
-                <h3 class="portal-title">A Arte Japonesa do Kintsugi</h3>
-                <p class="portal-excerpt">Como transformar suas cicatrizes emocionais em ouro e resiliência.</p>
-            </div>
-        </a>
-
-        <a href="posts/minimalismo-mental.html" class="portal-card">
-            <img src="assets/img/minimalismo.jpg" class="portal-thumbnail">
-            <div class="portal-content">
-                <span class="portal-tag">Vida Simples</span>
-                <h3 class="portal-title">Destralhando a Mente</h3>
-                <p class="portal-excerpt">Aprenda a remover o ruído cognitivo e focar no que é essencial.</p>
-            </div>
-        </a>
-
-    </section>
+    
+    <section class="portal-grid" id="portal-grid">
+        </section>
 </main>
 
 <footer>
     <p>© 2026 Sabedoria Simples — <a href="privacidade.html">Privacidade</a></p>
 </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const heroArea = document.getElementById("hero-area");
+        const grid = document.getElementById("portal-grid");
+        
+        fetch('artigos.json')
+            .then(response => response.json())
+            .then(artigos => {
+                if(artigos.length === 0) return;
+
+                // 1. DEFINIR O DESTAQUE PRINCIPAL (O primeiro do JSON)
+                const principal = artigos[0];
+                let heroHTML = `
+                    <a href="${principal.link}" class="main-featured">
+                        <img src="${principal.imagem}" alt="${principal.titulo}">
+                        <div class="main-featured-overlay">
+                            <span class="portal-tag">${principal.tag}</span>
+                            <h2 style="font-size: 2rem;">${principal.titulo}</h2>
+                        </div>
+                    </a>
+                    <div id="side-featured" style="display: flex; flex-direction: column; gap: 20px;"></div>
+                `;
+                heroArea.innerHTML = heroHTML;
+
+                // 2. DEFINIR OS DESTAQUES LATERAIS (Os próximos 2)
+                const sideFeatured = document.getElementById("side-featured");
+                for (let i = 1; i <= 2; i++) {
+                    if(artigos[i]) {
+                        sideFeatured.innerHTML += `
+                            <a href="${artigos[i].link}" class="portal-card">
+                                <img src="${artigos[i].imagem}" class="portal-thumbnail" style="height: 150px;">
+                                <div class="portal-content">
+                                    <span class="portal-tag">${artigos[i].tag}</span>
+                                    <h3 class="portal-title" style="font-size: 1rem;">${artigos[i].titulo}</h3>
+                                </div>
+                            </a>
+                        `;
+                    }
+                }
+
+                // 3. PREENCHER A GRID COM O RESTANTE (A partir do índice 3)
+                artigos.slice(3).forEach(artigo => {
+                    grid.innerHTML += `
+                        <a href="${artigo.link}" class="portal-card">
+                            <img src="${artigo.imagem}" class="portal-thumbnail" alt="${artigo.titulo}">
+                            <div class="portal-content">
+                                <span class="portal-tag">${artigo.tag}</span>
+                                <h3 class="portal-title">${artigo.titulo}</h3>
+                                <p class="portal-excerpt">${artigo.resumo}</p>
+                                <span style="font-size:0.7rem; color:#bbb;">${artigo.data}</span>
+                            </div>
+                        </a>
+                    `;
+                });
+            })
+            .catch(error => console.error('Erro:', error));
+    });
+</script>
 
 </body>
 </html>
