@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://cabidellir.github.io/sabedoriasimples/index.html</loc>
+    <lastmod>2026-01-09</lastmod>
+    <priority>1.00</priority>
+  </url>
+  
+  <url>
+    <loc>https://cabidellir.github.io/sabedoriasimples/artigos.html</loc>
+    <lastmod>2026-01-09</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://cabidellir.github.io/sabedoriasimples/sobre.html</loc>
+    <lastmod>2026-01-09</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://cabidellir.github.io/sabedoriasimples/entretenimento.html</loc>
+    <lastmod>2026-01-09</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://cabidellir.github.io/sabedoriasimples/posts/minimalismo-digital.html</loc>
+    <lastmod>2026-01-09</lastmod>
+    <priority>0.90</priority>
+  </url>
+</urlset>
