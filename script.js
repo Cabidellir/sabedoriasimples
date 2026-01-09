@@ -110,3 +110,33 @@ navLinks.forEach(link => {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const grid = document.querySelector(".portal-grid");
+    
+    // Busca os dados do arquivo JSON
+    fetch('artigos.json')
+        .then(response => response.json())
+        .then(artigos => {
+            // Limpa a grid antes de inserir (opcional)
+            grid.innerHTML = "";
+
+            artigos.forEach(artigo => {
+                // Cria a estrutura do card estilo Mistérios do Mundo
+                const card = `
+                    <a href="${artigo.link}" class="portal-card">
+                        <img src="${artigo.imagem}" class="portal-thumbnail" alt="${artigo.titulo}">
+                        <div class="portal-content">
+                            <span class="portal-tag">${artigo.tag}</span>
+                            <h3 class="portal-title">${artigo.titulo}</h3>
+                            <p class="portal-excerpt">${artigo.resumo}</p>
+                            <span style="font-size:0.7rem; color:#bbb;">${artigo.data}</span>
+                        </div>
+                    </a>
+                `;
+                grid.innerHTML += card;
+            });
+        })
+        .catch(error => console.error('Erro ao carregar artigos:', error));
+});
