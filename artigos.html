@@ -11,7 +11,6 @@
     <style>
         .archive-container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
         
-        /* Estilo da lista para parecer um portal de notícias limpo */
         .archive-item { 
             display: flex; 
             flex-direction: column; 
@@ -59,24 +58,12 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        /* Feedback visual enquanto carrega */
         #loading-msg { text-align: center; padding: 50px; color: #bbb; font-style: italic; }
     </style>
 </head>
 <body>
 
-<header>
-    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
-        <h1><a href="index.html" class="logo-link">Sabedoria Simples</a></h1>
-        <nav id="menu">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="artigos.html" class="active">Artigos</a></li>
-                <li><a href="entretenimento.html">Desafios</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<header></header>
 
 <main class="archive-container">
     <header style="text-align: center; margin-bottom: 60px;">
@@ -89,9 +76,9 @@
     </section>
 </main>
 
-<footer style="text-align: center; padding: 60px 0; color: #777; border-top: 1px solid #eee; margin-top: 50px;">
-    <p>© 2026 Sabedoria Simples — Todos os direitos reservados.</p>
-</footer>
+<footer></footer>
+
+<script src="js/main.js"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -100,7 +87,6 @@
         fetch('artigos.json')
             .then(response => response.json())
             .then(artigos => {
-                // Remove a mensagem de carregamento
                 listContainer.innerHTML = "";
 
                 artigos.forEach(artigo => {
