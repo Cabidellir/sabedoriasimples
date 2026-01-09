@@ -1,0 +1,20 @@
+[
+  {
+    "titulo": "A Neurociência da Intuição",
+    "link": "posts/neurociencia-da-intuicao.html",
+    "imagem": "assets/img/neurociencia-intuicao.jpg",
+    "tag": "Mistérios da Mente",
+    "resumo": "Por que seu instinto raramente falha? Descubra a biologia por trás do sexto sentido.",
+    "data": "09 de Janeiro, 2026",
+    "destaque": true
+  },
+  {
+    "titulo": "A Ciência da Dieta Mental",
+    "link": "posts/artigo-marco-aurelio.html",
+    "imagem": "assets/img/marco-aurelio.jpg",
+    "tag": "Filosofia Prática",
+    "resumo": "Como Marco Aurélio protegia sua paz de espírito em tempos de caos.",
+    "data": "08 de Janeiro, 2026",
+    "destaque": false
+  }
+]
