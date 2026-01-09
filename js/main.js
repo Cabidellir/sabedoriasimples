@@ -1,24 +1,34 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Injetar o Header
+    
+    // Injetar o HEADER
     const headerElement = document.querySelector("header");
     if (headerElement) {
         fetch('/header.html')
             .then(response => response.text())
             .then(data => {
                 headerElement.innerHTML = data;
-                highlightActiveMenu(); // Função para marcar onde o usuário está
+                highlightActiveMenu();
+            });
+    }
+
+    // Injetar o FOOTER (Novo)
+    const footerElement = document.querySelector("footer");
+    if (footerElement) {
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                footerElement.innerHTML = data;
             });
     }
 });
 
-// Função para deixar o link do menu "ativo" automaticamente
 function highlightActiveMenu() {
     const currentPage = window.location.pathname;
     const menuLinks = document.querySelectorAll("#menu ul li a");
     
     menuLinks.forEach(link => {
-        if (link.getAttribute("href") === currentPage || 
-           (currentPage === "/" && link.getAttribute("href") === "/index.html")) {
+        // Verifica se o link corresponde à página atual
+        if (currentPage.includes(link.getAttribute("href"))) {
             link.classList.add("active");
         }
     });
