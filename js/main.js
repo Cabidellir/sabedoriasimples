@@ -1,37 +1,31 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Descobre o caminho base do projeto (ajuste para o nome da sua pasta no GitHub)
-    const repoName = '/sabedoriasimples';
-    const isLocal = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost";
-    const base = isLocal ? "" : repoName;
+    
+    // Função para carregar componentes de forma inteligente
+    function loadComponent(selector, file) {
+        const element = document.querySelector(selector);
+        if (!element) return;
 
-    // Injetar o HEADER
-    const headerElement = document.querySelector("header");
-    if (headerElement) {
-        fetch(`${base}/header.html`)
+        // Tenta carregar o arquivo. Se falhar, tenta um caminho alternativo.
+        // Isso resolve o problema de estar na Home ou dentro de /posts/
+        fetch(file)
             .then(response => {
-                if (!response.ok) throw new Error('Header não encontrado');
-                return response.text();
+                if (!response.ok) {
+                    // Se não achou (404), tenta subir um nível (caso esteja em /posts/)
+                    return fetch('../' + file);
+                }
+                return response;
             })
+            .then(response => response.text())
             .then(data => {
-                headerElement.innerHTML = data;
-                highlightActiveMenu();
+                element.innerHTML = data;
+                if (selector === 'header') highlightActiveMenu();
             })
-            .catch(err => console.error(err));
+            .catch(err => console.error("Erro ao carregar " + file, err));
     }
 
-    // Injetar o FOOTER
-    const footerElement = document.querySelector("footer");
-    if (footerElement) {
-        fetch(`${base}/footer.html`)
-            .then(response => {
-                if (!response.ok) throw new Error('Footer não encontrado');
-                return response.text();
-            })
-            .then(data => {
-                footerElement.innerHTML = data;
-            })
-            .catch(err => console.error(err));
-    }
+    // Chama o carregamento sem a barra inicial "/"
+    loadComponent('header', 'header.html');
+    loadComponent('footer', 'footer.html');
 });
 
 function highlightActiveMenu() {
@@ -40,7 +34,7 @@ function highlightActiveMenu() {
     
     menuLinks.forEach(link => {
         const href = link.getAttribute("href");
-        if (currentPage.endsWith(href) || (currentPage.endsWith('/') && href === "index.html")) {
+        if (currentPage.includes(href) && href !== "index.html") {
             link.classList.add("active");
         }
     });
