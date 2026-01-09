@@ -105,18 +105,7 @@
 
 <body>
 
-<header>
-    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
-        <h1><a href="index.html" class="logo-link">Sabedoria Simples</a></h1>
-        <nav id="menu">
-            <ul>
-                <li><a href="index.html" class="active">Início</a></li>
-                <li><a href="artigos.html">Artigos</a></li>
-                <li><a href="entretenimento.html">Desafios</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<header></header>
 
 <main>
     <section class="hero-portal" id="hero-area">
@@ -128,9 +117,9 @@
         </section>
 </main>
 
-<footer>
-    <p>© 2026 Sabedoria Simples — <a href="privacidade.html">Privacidade</a></p>
-</footer>
+<footer></footer>
+
+<script src="js/main.js"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -142,7 +131,7 @@
             .then(artigos => {
                 if(artigos.length === 0) return;
 
-                // 1. DEFINIR O DESTAQUE PRINCIPAL (O primeiro do JSON)
+                // 1. Destaque Principal
                 const principal = artigos[0];
                 let heroHTML = `
                     <a href="${principal.link}" class="main-featured">
@@ -156,7 +145,7 @@
                 `;
                 heroArea.innerHTML = heroHTML;
 
-                // 2. DEFINIR OS DESTAQUES LATERAIS (Os próximos 2)
+                // 2. Destaques Laterais
                 const sideFeatured = document.getElementById("side-featured");
                 for (let i = 1; i <= 2; i++) {
                     if(artigos[i]) {
@@ -172,7 +161,7 @@
                     }
                 }
 
-                // 3. PREENCHER A GRID COM O RESTANTE (A partir do índice 3)
+                // 3. Grid de Artigos Restantes
                 artigos.slice(3).forEach(artigo => {
                     grid.innerHTML += `
                         <a href="${artigo.link}" class="portal-card">
@@ -187,7 +176,7 @@
                     `;
                 });
             })
-            .catch(error => console.error('Erro:', error));
+            .catch(error => console.error('Erro ao carregar artigos:', error));
     });
 </script>
 
