@@ -1,20 +1,114 @@
 [
   {
-    "titulo": "A Neurociência da Intuição",
+    "titulo": "A Neurociência da Intuição: Por que seu instinto raramente falha",
     "link": "posts/neurociencia-da-intuicao.html",
     "imagem": "assets/img/neurociencia-intuicao.jpg",
     "tag": "Mistérios da Mente",
-    "resumo": "Por que seu instinto raramente falha? Descubra a biologia por trás do sexto sentido.",
-    "data": "09 de Janeiro, 2026",
-    "destaque": true
+    "resumo": "A intuição não é magia, é biologia. Descubra como o seu cérebro processa decisões antes da lógica.",
+    "data": "09 de Janeiro, 2026"
   },
   {
-    "titulo": "A Ciência da Dieta Mental",
+    "titulo": "O Valor do Silêncio: Por Que a Quietude é a Sua Melhor Estratégia",
+    "link": "posts/valor-do-silencio.html",
+    "imagem": "assets/img/silencio.jpg",
+    "tag": "Autoconhecimento",
+    "resumo": "Descubra como o silêncio regenera o cérebro e oferece a clareza necessária para grandes decisões.",
+    "data": "05 de Janeiro, 2026"
+  },
+  {
+    "titulo": "A Sabedoria de Ser Imperfeito: O Fim da Tirania do Perfeccionismo",
+    "link": "posts/sabedoria-de-ser-imperfeito.html",
+    "imagem": "assets/img/kintsugi.jpg",
+    "tag": "Bem-estar",
+    "resumo": "A arte do Kintsugi aplicada à vida: como aceitar suas falhas e transformá-las em força.",
+    "data": "02 de Janeiro, 2026"
+  },
+  {
+    "titulo": "A Arte de Acordar para a Vida: Manhãs com Propósito",
+    "link": "posts/arte-de-acordar-para-a-vida.html",
+    "imagem": "assets/img/rotina-matinal.jpg",
+    "tag": "Produtividade",
+    "resumo": "Vença a preguiça matinal e comece seu dia com a intenção e a disciplina de um imperador.",
+    "data": "30 de Dezembro, 2025"
+  },
+  {
+    "titulo": "O Que Realmente Importa: Priorizando o Essencial",
+    "link": "posts/o-que-realmente-importa.html",
+    "imagem": "assets/img/memento-mori.jpg",
+    "tag": "Reflexão",
+    "resumo": "Use o teste do Memento Mori para distinguir entre o barulho da rotina e os valores reais.",
+    "data": "25 de Dezembro, 2025"
+  },
+  {
+    "titulo": "Pequenas Mudanças, Grandes Transformações: O Poder do 1%",
+    "link": "posts/pequenas-mudancas-grandes-transformacoes.html",
+    "imagem": "assets/img/habitos-progresso.jpg",
+    "tag": "Desenvolvimento",
+    "resumo": "A ciência dos hábitos aplicada para gerar resultados extraordinários a longo prazo.",
+    "data": "20 de Dezembro, 2025"
+  },
+  {
+    "titulo": "O Peso Invisível das Expectativas: Viver para Si Mesmo",
+    "link": "posts/peso-invisivel-des-expectativas.html",
+    "imagem": "assets/img/expectativas.jpg",
+    "tag": "Inteligência Emocional",
+    "resumo": "Como se libertar da pressão social e do julgamento alheio usando o controle interno.",
+    "data": "15 de Dezembro, 2025"
+  },
+  {
+    "titulo": "O Poder da Mente Estoica: Construindo uma Fortaleza Interior",
+    "link": "posts/poder-mente-estoica.html",
+    "imagem": "assets/img/mente-estoica.jpg",
+    "tag": "Filosofia",
+    "resumo": "Desenvolva resiliência inabalável através dos quatro pilares da virtude clássica.",
+    "data": "10 de Dezembro, 2025"
+  },
+  {
+    "titulo": "Minimalismo Mental: Como Destralhar a sua Mente",
+    "link": "posts/minimalismo-mental.html",
+    "imagem": "assets/img/minimalismo.jpg",
+    "tag": "Vida Simples",
+    "resumo": "Aprenda a remover o excesso de ruído cognitivo para uma vida mais leve e focada.",
+    "data": "05 de Dezembro, 2025"
+  },
+  {
+    "titulo": "O Filtro da Atenção: A Moeda Mais Valiosa da Era Moderna",
+    "link": "posts/filtro-da-atencao.html",
+    "imagem": "assets/img/atencao-digital.jpg",
+    "tag": "Minimalismo Digital",
+    "resumo": "Como blindar sua mente contra o sequestro digital e recuperar o foco.",
+    "data": "01 de Dezembro, 2025"
+  },
+  {
+    "titulo": "Deixar Ir o Controle: O Segredo para uma Vida Sem Angústia",
+    "link": "posts/deixar-ir-o-controle.html",
+    "imagem": "assets/img/deixar-ir.jpg",
+    "tag": "Filosofia de Vida",
+    "resumo": "A lição de Epicteto sobre focar apenas no que depende de nós.",
+    "data": "25 de Novembro, 2025"
+  },
+  {
+    "titulo": "Como Ganhar uma Discussão: As Lições de Arthur Schopenhauer",
+    "link": "posts/como-ganhar-uma-discussao.html",
+    "imagem": "assets/img/schopenhauer.jpg",
+    "tag": "Psicologia",
+    "resumo": "Um mergulho na dialética erística para identificar falácias e proteger sua razão.",
+    "data": "20 de Novembro, 2025"
+  },
+  {
+    "titulo": "Ansiedade: O Guia Definitivo para o Retorno ao Presente",
+    "link": "posts/ansiedade-o-retorno-ao-presente.html",
+    "imagem": "assets/img/ansiedade.jpg",
+    "tag": "Saúde Mental",
+    "resumo": "Aprenda a âncora do momento presente para silenciar as preocupações com o futuro.",
+    "data": "15 de Novembro, 2025"
+  },
+  {
+    "titulo": "A Ciência da Dieta Mental: Lições de Marco Aurélio",
     "link": "posts/artigo-marco-aurelio.html",
     "imagem": "assets/img/marco-aurelio.jpg",
     "tag": "Filosofia Prática",
-    "resumo": "Como Marco Aurélio protegia sua paz de espírito em tempos de caos.",
-    "data": "08 de Janeiro, 2026",
-    "destaque": false
+    "resumo": "Descubra como o imperador filósofo protegia sua mente de distrações externas.",
+    "data": "10 de Novembro, 2025"
   }
 ]
