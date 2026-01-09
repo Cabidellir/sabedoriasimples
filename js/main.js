@@ -1,16 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-    // Função para carregar componentes de forma inteligente
+    // Função para carregar componentes de forma dinâmica
     function loadComponent(selector, file) {
         const element = document.querySelector(selector);
         if (!element) return;
 
-        // Tenta carregar o arquivo. Se falhar, tenta um caminho alternativo.
-        // Isso resolve o problema de estar na Home ou dentro de /posts/
-        fetch(file)
+        // Tenta carregar o arquivo da raiz relativa
+        fetch('/' + file)
             .then(response => {
                 if (!response.ok) {
-                    // Se não achou (404), tenta subir um nível (caso esteja em /posts/)
+                    // Se falhar (Netlify às vezes exige caminho sem a barra), tenta caminho relativo
+                    return fetch(file);
+                }
+                return response;
+            })
+            .then(response => {
+                if (!response.ok) {
+                    // Se ainda falhar, tenta subir um nível (para páginas dentro de /posts/)
                     return fetch('../' + file);
                 }
                 return response;
@@ -20,10 +26,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 element.innerHTML = data;
                 if (selector === 'header') highlightActiveMenu();
             })
-            .catch(err => console.error("Erro ao carregar " + file, err));
+            .catch(err => console.warn("Aviso: Não foi possível carregar " + file + ". Verifique se o arquivo existe na raiz."));
     }
 
-    // Chama o carregamento sem a barra inicial "/"
     loadComponent('header', 'header.html');
     loadComponent('footer', 'footer.html');
 });
@@ -34,7 +39,8 @@ function highlightActiveMenu() {
     
     menuLinks.forEach(link => {
         const href = link.getAttribute("href");
-        if (currentPage.includes(href) && href !== "index.html") {
+        // Remove caminhos relativos para comparar apenas o nome do arquivo
+        if (currentPage.includes(href.replace('../', '')) && href !== "index.html") {
             link.classList.add("active");
         }
     });
