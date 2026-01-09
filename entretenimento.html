@@ -7,43 +7,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafios Mentais | Sabedoria Simples</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos específicos para os botões das alternativas */
+        .quiz-option {
+            background: white;
+            border: 2px solid #eee;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'Montserrat', sans-serif;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .quiz-option:hover {
+            border-color: #C6A667;
+            background: #fffdf9;
+            transform: translateX(5px);
+        }
+
+        .quiz-option.correct { background: #d4edda; border-color: #28a745; }
+        .quiz-option.wrong { background: #f8d7da; border-color: #dc3545; }
+        
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1><a href="index.html">Sabedoria Simples</a></h1>
-    <nav id="menu">
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="artigos.html">Artigos</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="entretenimento.html" class="active">Desafios</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
-</header>
+<header></header>
 
 <main>
-    <section class="page-section">
-        <h2 class="page-title">Exercite sua Mente</h2>
-        <p style="text-align: center; max-width: 700px; margin: 0 auto 20px auto; padding: 0 20px;">
+    <section class="page-section" style="padding: 40px 0;">
+        <h2 class="page-title" style="text-align: center; font-family: 'Montserrat'; font-size: 2.5rem; font-weight: 800;">Exercite sua Mente</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 30px auto; padding: 0 20px; color: #666;">
             A sabedoria também exige uma mente afiada. Teste sua capacidade de raciocínio lógico e clareza mental abaixo.
         </p>
 
         <div id="quiz-container" style="background: #f9f9f9; padding: 30px; border-radius: 15px; margin: 20px auto; border: 1px solid #eee; max-width: 600px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
             
             <div id="progress-bar-container" style="width: 100%; background: #e0e0e0; height: 6px; border-radius: 10px; margin-bottom: 25px;">
-                <div id="progress-bar" style="width: 0%; background: var(--gold, #C6A667); height: 100%; border-radius: 10px; transition: 0.4s ease;"></div>
+                <div id="progress-bar" style="width: 0%; background: #C6A667; height: 100%; border-radius: 10px; transition: 0.4s ease;"></div>
             </div>
 
             <div id="question-container">
-                <h3 id="question-text" style="margin-bottom: 25px; line-height: 1.4; min-height: 60px;">Carregando desafio...</h3>
+                <h3 id="question-text" style="margin-bottom: 25px; line-height: 1.4; min-height: 60px; font-family: 'Montserrat';">Carregando desafio...</h3>
                 <div id="options-container" style="display: grid; gap: 12px;">
                     </div>
             </div>
 
             <div id="result-container" style="display: none; text-align: center; animation: fadeIn 0.5s ease;">
-                <h3 style="color: var(--gold, #C6A667);">Seu Resultado</h3>
+                <h3 style="color: #C6A667; font-family: 'Montserrat'; font-weight: 800; font-size: 1.8rem;">Seu Resultado</h3>
                 <p id="score-text" style="font-size: 1.3rem; margin: 20px 0; color: #333; font-weight: 600;"></p>
                 
                 <div id="share-section" style="margin: 25px 0; padding: 20px; border-top: 1px solid #ddd; background: #fff; border-radius: 10px;">
@@ -61,11 +77,9 @@
     </section>
 </main>
 
-<footer>
-    <p>© 2025 Sabedoria Simples — Todos os direitos reservados.</p>
-    <p><a href="privacidade.html" style="color: #888; text-decoration: none; font-size: 0.8rem;">Política de Privacidade</a></p>
-</footer>
+<footer></footer>
 
+<script src="js/main.js"></script>
 <script src="quiz.js"></script> 
 </body>
 </html>
