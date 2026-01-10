@@ -1,16 +1,13 @@
-
-    
-    [
-    {
+[
+  {
     "titulo": "Minimalismo Digital: Como Retomar o Controle da Sua Atenção",
+    "link": "posts/minimalismo-digital.html",
     "imagem": "assets/img/minimalismo-digital.png",
     "tag": "Filosofia Prática",
     "resumo": "Aprenda como a filosofia estoica e o minimalismo podem ajudar você a vencer o vício em celular.",
-    "data": "10 de Janeiro, 2026",
-    "link": "posts/minimalismo-digital.html"
-    },
-  
-    {
+    "data": "10 de Janeiro, 2026"
+  },
+  {
     "titulo": "A Neurociência da Intuição: Por que seu instinto raramente falha",
     "link": "posts/neurociencia-da-intuicao.html",
     "imagem": "assets/img/neurociencia-intuicao.jpg",
@@ -29,7 +26,7 @@
   {
     "titulo": "A Sabedoria de Ser Imperfeito: O Fim da Tirania do Perfeccionismo",
     "link": "posts/sabedoria-de-ser-imperfeito.html",
-    "imagem": "assets/img/kintsugi.jpg",
+    "imagem": "assets/img/imperfeicao.jpg",
     "tag": "Bem-estar",
     "resumo": "A arte do Kintsugi aplicada à vida: como aceitar suas falhas e transformá-las em força.",
     "data": "02 de Janeiro, 2026"
@@ -45,7 +42,7 @@
   {
     "titulo": "O Que Realmente Importa: Priorizando o Essencial",
     "link": "posts/o-que-realmente-importa.html",
-    "imagem": "assets/img/memento-mori.jpg",
+    "imagem": "assets/img/essencial.jpg",
     "tag": "Reflexão",
     "resumo": "Use o teste do Memento Mori para distinguir entre o barulho da rotina e os valores reais.",
     "data": "25 de Dezembro, 2025"
@@ -53,14 +50,14 @@
   {
     "titulo": "Pequenas Mudanças, Grandes Transformações: O Poder do 1%",
     "link": "posts/pequenas-mudancas-grandes-transformacoes.html",
-    "imagem": "assets/img/habitos-progresso.jpg",
+    "imagem": "assets/img/transformacao.jpg",
     "tag": "Desenvolvimento",
     "resumo": "A ciência dos hábitos aplicada para gerar resultados extraordinários a longo prazo.",
     "data": "20 de Dezembro, 2025"
   },
   {
     "titulo": "O Peso Invisível das Expectativas: Viver para Si Mesmo",
-    "link": "posts/peso-invisivel-des-expectativas.html",
+    "link": "posts/o-peso-das-expectativas.html",
     "imagem": "assets/img/expectativas.jpg",
     "tag": "Inteligência Emocional",
     "resumo": "Como se libertar da pressão social e do julgamento alheio usando o controle interno.",
@@ -68,7 +65,7 @@
   },
   {
     "titulo": "O Poder da Mente Estoica: Construindo uma Fortaleza Interior",
-    "link": "posts/poder-mente-estoica.html",
+    "link": "posts/poder-da-mente-estoica.html",
     "imagem": "assets/img/mente-estoica.jpg",
     "tag": "Filosofia",
     "resumo": "Desenvolva resiliência inabalável através dos quatro pilares da virtude clássica.",
