@@ -44,4 +44,14 @@ function highlightActiveMenu() {
             link.classList.add("active");
         }
     });
+
+    // Dentro da função loadComponent, após element.innerHTML = data;
+const links = element.querySelectorAll('a');
+links.forEach(link => {
+    const href = link.getAttribute('href');
+    // Se o usuário estiver na pasta /posts/ e o link não for externo
+    if (window.location.pathname.includes('/posts/') && !href.startsWith('http') && !href.startsWith('../')) {
+        link.setAttribute('href', '../' + href);
+    }
+});
 }
