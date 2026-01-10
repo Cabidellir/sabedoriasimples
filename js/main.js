@@ -8,25 +8,34 @@ document.addEventListener("DOMContentLoaded", function() {
         // Tenta carregar o arquivo da raiz relativa
         fetch('/' + file)
             .then(response => {
-                if (!response.ok) {
-                    // Se falhar (Netlify às vezes exige caminho sem a barra), tenta caminho relativo
-                    return fetch(file);
-                }
+                if (!response.ok) return fetch(file);
                 return response;
             })
             .then(response => {
-                if (!response.ok) {
-                    // Se ainda falhar, tenta subir um nível (para páginas dentro de /posts/)
-                    return fetch('../' + file);
-                }
+                if (!response.ok) return fetch('../' + file);
                 return response;
             })
             .then(response => response.text())
             .then(data => {
                 element.innerHTML = data;
+
+                // --- INÍCIO DA CORREÇÃO DE LINKS PARA SUBPASTAS ---
+                const links = element.querySelectorAll('a');
+                const isInSubfolder = window.location.pathname.includes('/posts/');
+
+                links.forEach(link => {
+                    let href = link.getAttribute('href');
+                    
+                    // Se estiver em /posts/, ajusta links que não são externos e não estão subindo nível
+                    if (isInSubfolder && href && !href.startsWith('http') && !href.startsWith('../') && !href.startsWith('#')) {
+                        link.setAttribute('href', '../' + href);
+                    }
+                });
+                // --- FIM DA CORREÇÃO ---
+
                 if (selector === 'header') highlightActiveMenu();
             })
-            .catch(err => console.warn("Aviso: Não foi possível carregar " + file + ". Verifique se o arquivo existe na raiz."));
+            .catch(err => console.warn("Aviso: Erro ao carregar " + file));
     }
 
     loadComponent('header', 'header.html');
@@ -39,19 +48,10 @@ function highlightActiveMenu() {
     
     menuLinks.forEach(link => {
         const href = link.getAttribute("href");
-        // Remove caminhos relativos para comparar apenas o nome do arquivo
-        if (currentPage.includes(href.replace('../', '')) && href !== "index.html") {
+        // Remove o prefixo de subida de nível para a comparação de classe ativa
+        const cleanHref = href.replace('../', '');
+        if (currentPage.includes(cleanHref) && cleanHref !== "index.html") {
             link.classList.add("active");
         }
     });
-
-    // Dentro da função loadComponent, após element.innerHTML = data;
-const links = element.querySelectorAll('a');
-links.forEach(link => {
-    const href = link.getAttribute('href');
-    // Se o usuário estiver na pasta /posts/ e o link não for externo
-    if (window.location.pathname.includes('/posts/') && !href.startsWith('http') && !href.startsWith('../')) {
-        link.setAttribute('href', '../' + href);
-    }
-});
 }
