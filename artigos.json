@@ -1,4 +1,15 @@
+
+
 [
+{
+  "titulo": "A Arte de Estar Só: Transformando Solidão em Solitude",
+  "link": "posts/a-arte-de-estar-so.html",
+  "imagem": "assets/img/solitude.jpg",
+  "tag": "Autoconhecimento",
+  "resumo": "Descubra como transformar o medo de ficar sozinho na sua maior fonte de força e criatividade.",
+  "data": "15 de Janeiro, 2026"
+}
+  
   {
     "titulo": "Minimalismo Digital: Como Retomar o Controle da Sua Atenção",
     "link": "posts/minimalismo-digital.html",
