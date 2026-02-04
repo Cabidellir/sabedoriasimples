@@ -2,6 +2,14 @@
 
   [
   {
+    "titulo": "A Sabedoria dos Antigos: Como a Filosofia Grega Moldou o Pensamento Ocidental",
+    "link": "posts/a-sabedoria-dos-antigos",
+    "imagem": "assets/img/filosofia-grega.jpg",
+    "tag": "Filosofia",
+    "resumo": "Explore como Sócrates, Platão e Aristóteles lançaram as bases do pensamento ocidental.",
+    "data": "04 de Fevereiro, 2026"
+  },
+  {
     "titulo": "A Arte de Estar Só: Transformando Solidão em Solitude",
     "link": "posts/a-arte-de-estar-so.html",
     "imagem": "assets/img/solitude.jpg",
