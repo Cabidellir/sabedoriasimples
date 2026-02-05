@@ -1,6 +1,14 @@
 
 
   [
+    {
+  "titulo": "O Príncipe no Escritório: Maquiavelismo Prático para a Carreira Moderna",
+  "link": "posts/o-principe-no-escritorio",
+  "imagem": "assets/img/maquiavel-carreira.jpg",
+  "tag": "Estratégia",
+  "resumo": "Saiba como o realismo de Nicolau Maquiavel pode ser a chave para navegar nas complexas dinâmicas de poder do mundo corporativo atual.",
+  "data": "05 de Fevereiro, 2026"
+  },
   {
     "titulo": "A Sabedoria dos Antigos: Como a Filosofia Grega Moldou o Pensamento Ocidental",
     "link": "posts/a-sabedoria-dos-antigos",
