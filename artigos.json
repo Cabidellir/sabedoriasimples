@@ -2,6 +2,14 @@
 
   [
     {
+  "titulo": "O Sentido da Vida em Tempos de Crise: A Sabedoria de Viktor Frankl",
+  "link": "posts/o-sentido-da-vida-viktor-frankl",
+  "imagem": "assets/img/viktor-frankl.jpg",
+  "tag": "Psicologia",
+  "resumo": "Descubra como a Logoterapia e as lições de Viktor Frankl podem ajudar-nos a encontrar propósito mesmo nas situações mais difíceis.",
+  "data": "06 de Fevereiro, 2026"
+    },
+    {
   "titulo": "O Príncipe no Escritório: Maquiavelismo Prático para a Carreira Moderna",
   "link": "posts/o-principe-no-escritorio",
   "imagem": "assets/img/maquiavel-carreira.jpg",
