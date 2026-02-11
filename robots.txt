@@ -1,4 +1,12 @@
-User-agent: *
+# Autoriza o robô do AdSense a ler todo o site para análise de conteúdo
+User-agent: Mediapartners-Google
 Allow: /
 
+# Configurações para todos os outros motores de busca (Google, Bing, DuckDuckGo)
+User-agent: *
+Allow: /
+Disallow: /js/
+Disallow: /css/
+
+# Indica o caminho do seu Sitemap para agilizar a indexação
 Sitemap: https://sabedoriasimples.blog/sitemap.xml
