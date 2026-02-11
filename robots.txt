@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cabidellir.github.io/sabedoriasimples/sitemap.xml
+Sitemap: https://sabedoriasimples.blog/sitemap.xml
