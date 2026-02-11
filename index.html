@@ -2,9 +2,18 @@
 <html lang="pt-BR">
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3375728934205202" crossorigin="anonymous"></script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Sabedoria Simples | Mistérios da Mente e Filosofia</title>
+    <meta name="description" content="Explore lições de estoicismo, minimalismo e psicologia para uma vida com mais propósito. Artigos profundos sobre filosofia antiga e moderna aplicada ao dia a dia.">
+    
+    <meta property="og:title" content="Sabedoria Simples | Mistérios da Mente e Filosofia">
+    <meta property="og:description" content="Lições atemporais sobre estoicismo, mente e comportamento.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sabedoriasimples.blog/">
+
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     
@@ -131,14 +140,14 @@
             .then(artigos => {
                 if(artigos.length === 0) return;
 
-                // 1. Destaque Principal
+                // 1. Destaque Principal - AJUSTADO PARA H1 (Exigência SEO)
                 const principal = artigos[0];
                 let heroHTML = `
                     <a href="${principal.link}" class="main-featured">
                         <img src="${principal.imagem}" alt="${principal.titulo}">
                         <div class="main-featured-overlay">
                             <span class="portal-tag">${principal.tag}</span>
-                            <h2 style="font-size: 2rem;">${principal.titulo}</h2>
+                            <h1 style="font-size: 2rem; font-family: 'Montserrat'; margin: 10px 0;">${principal.titulo}</h1>
                         </div>
                     </a>
                     <div id="side-featured" style="display: flex; flex-direction: column; gap: 20px;"></div>
