@@ -25,7 +25,7 @@ body {
     line-height: 1.8;
 }
 
-/* CABEÇALHO */
+/* CABEÇALHO (AJUSTADO PARA SEO) */
 header {
     background: var(--light-gray);
     padding: 30px 20px;
@@ -34,17 +34,20 @@ header {
     text-align: center;
 }
 
-header h1 {
+/* Substituído 'header h1' por classe para evitar duplicidade de H1 */
+.logo-wrapper {
     margin: 0;
+    display: block;
 }
 
-header h1 a {
+.logo-link {
     color: var(--gold) !important;
     text-decoration: none !important;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 2.2rem;
     letter-spacing: -1px;
+    display: inline-block;
 }
 
 header p {
@@ -128,15 +131,8 @@ main {
     user-select: none;
 }
 
-.quote-icon-left {
-    top: -30px;
-    left: -20px;
-}
-
-.quote-icon-right {
-    bottom: -50px;
-    right: -20px;
-}
+.quote-icon-left { top: -30px; left: -20px; }
+.quote-icon-right { bottom: -50px; right: -20px; }
 
 #quote-box {
     font-size: 1.5rem;
@@ -251,7 +247,7 @@ footer a:hover {
 
 /* RESPONSIVIDADE (MOBILE) */
 @media (max-width: 768px) {
-    header h1 a { font-size: 1.7rem; }
+    .logo-link { font-size: 1.7rem; }
     
     #menu ul {
         display: none;
@@ -277,14 +273,13 @@ footer a:hover {
     }
 }
 
-
-    .quote-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap; /* Garante que no celular um fique embaixo do outro se não couber */
-        margin-top: 20px;
-    }
+.quote-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
 
 /* Animação de Brilho */
 @keyframes quote-glow {
