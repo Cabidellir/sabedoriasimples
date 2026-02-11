@@ -1,5 +1,21 @@
 [
   {
+    "titulo": "Sêneca: O Valor do Tempo e a Arte de Não Desperdiçar a Vida",
+    "link": "posts/seneca-o-valor-do-tempo",
+    "imagem": "assets/img/memento-mori.jpg",
+    "tag": "Estoicismo",
+    "resumo": "A vida não é curta, nós é que a desperdiçamos. Explore as lições de Sêneca sobre como gerir o seu recurso mais precioso e viver com propósito.",
+    "data": "11 de Fevereiro, 2026"
+  },
+  {
+    "titulo": "A Neurociência do Hábito: Reprogramando a sua Arquitetura Cerebral",
+    "link": "posts/neurociencia-do-habito",
+    "imagem": "assets/img/habitos-progresso.jpg",
+    "tag": "Mistérios da Mente",
+    "resumo": "Entenda como os gânglios basais e a neuroplasticidade moldam sua rotina e aprenda estratégias científicas para mudar comportamentos difíceis.",
+    "data": "10 de Fevereiro, 2026"
+  },
+  {
     "titulo": "O Sentido da Vida em Tempos de Crise: A Sabedoria de Viktor Frankl",
     "link": "posts/o-sentido-da-vida-viktor-frankl",
     "imagem": "assets/img/viktor-frankl.jpg",
