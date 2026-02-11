@@ -1,21 +1,19 @@
-
-
-  [
-    {
-  "titulo": "O Sentido da Vida em Tempos de Crise: A Sabedoria de Viktor Frankl",
-  "link": "posts/o-sentido-da-vida-viktor-frankl",
-  "imagem": "assets/img/viktor-frankl.jpg",
-  "tag": "Psicologia",
-  "resumo": "Descubra como a Logoterapia e as lições de Viktor Frankl podem ajudar-nos a encontrar propósito mesmo nas situações mais difíceis.",
-  "data": "06 de Fevereiro, 2026"
-    },
-    {
-  "titulo": "O Príncipe no Escritório: Maquiavelismo Prático para a Carreira Moderna",
-  "link": "posts/o-principe-no-escritorio",
-  "imagem": "assets/img/maquiavel-carreira.jpg",
-  "tag": "Estratégia",
-  "resumo": "Saiba como o realismo de Nicolau Maquiavel pode ser a chave para navegar nas complexas dinâmicas de poder do mundo corporativo atual.",
-  "data": "05 de Fevereiro, 2026"
+[
+  {
+    "titulo": "O Sentido da Vida em Tempos de Crise: A Sabedoria de Viktor Frankl",
+    "link": "posts/o-sentido-da-vida-viktor-frankl",
+    "imagem": "assets/img/viktor-frankl.jpg",
+    "tag": "Psicologia",
+    "resumo": "Descubra como a Logoterapia e as lições de Viktor Frankl podem ajudar-nos a encontrar propósito mesmo nas situações mais difíceis.",
+    "data": "06 de Fevereiro, 2026"
+  },
+  {
+    "titulo": "O Príncipe no Escritório: Maquiavelismo Prático para a Carreira Moderna",
+    "link": "posts/o-principe-no-escritorio",
+    "imagem": "assets/img/maquiavel-carreira.jpg",
+    "tag": "Estratégia",
+    "resumo": "Saiba como o realismo de Nicolau Maquiavel pode ser a chave para navegar nas complexas dinâmicas de poder do mundo corporativo atual.",
+    "data": "05 de Fevereiro, 2026"
   },
   {
     "titulo": "A Sabedoria dos Antigos: Como a Filosofia Grega Moldou o Pensamento Ocidental",
@@ -27,7 +25,7 @@
   },
   {
     "titulo": "A Arte de Estar Só: Transformando Solidão em Solitude",
-    "link": "posts/a-arte-de-estar-so.html",
+    "link": "posts/a-arte-de-estar-so",
     "imagem": "assets/img/solitude.jpg",
     "tag": "Autoconhecimento",
     "resumo": "Descubra como transformar o medo de ficar sozinho na sua maior fonte de força e criatividade.",
@@ -35,7 +33,7 @@
   },
   {
     "titulo": "Minimalismo Digital: Como Retomar o Controle da Sua Atenção",
-    "link": "posts/minimalismo-digital.html",
+    "link": "posts/minimalismo-digital",
     "imagem": "assets/img/minimalismo-digital.png",
     "tag": "Filosofia Prática",
     "resumo": "Aprenda como a filosofia estoica e o minimalismo podem ajudar você a vencer o vício em celular.",
@@ -43,7 +41,7 @@
   },
   {
     "titulo": "A Neurociência da Intuição: Por que seu instinto raramente falha",
-    "link": "posts/neurociencia-da-intuicao.html",
+    "link": "posts/neurociencia-da-intuicao",
     "imagem": "assets/img/neurociencia-intuicao.jpg",
     "tag": "Mistérios da Mente",
     "resumo": "A intuição não é magia, é biologia. Descubra como o seu cérebro processa decisões antes da lógica.",
@@ -51,7 +49,7 @@
   },
   {
     "titulo": "O Valor do Silêncio: Por Que a Quietude é a Sua Melhor Estratégia",
-    "link": "posts/valor-do-silencio.html",
+    "link": "posts/valor-do-silencio",
     "imagem": "assets/img/silencio.jpg",
     "tag": "Autoconhecimento",
     "resumo": "Descubra como o silêncio regenera o cérebro e oferece a clareza necessária para grandes decisões.",
@@ -59,7 +57,7 @@
   },
   {
     "titulo": "A Sabedoria de Ser Imperfeito: O Fim da Tirania do Perfeccionismo",
-    "link": "posts/sabedoria-de-ser-imperfeito.html",
+    "link": "posts/sabedoria-de-ser-imperfeito",
     "imagem": "assets/img/imperfeicao.jpg",
     "tag": "Bem-estar",
     "resumo": "A arte do Kintsugi aplicada à vida: como aceitar suas falhas e transformá-las em força.",
@@ -67,7 +65,7 @@
   },
   {
     "titulo": "A Arte de Acordar para a Vida: Manhãs com Propósito",
-    "link": "posts/arte-de-acordar-para-a-vida.html",
+    "link": "posts/arte-de-acordar-para-a-vida",
     "imagem": "assets/img/rotina-matinal.jpg",
     "tag": "Produtividade",
     "resumo": "Vença a preguiça matinal e comece seu dia com a intenção e a disciplina de um imperador.",
@@ -75,7 +73,7 @@
   },
   {
     "titulo": "O Que Realmente Importa: Priorizando o Essencial",
-    "link": "posts/o-que-realmente-importa.html",
+    "link": "posts/o-que-realmente-importa",
     "imagem": "assets/img/essencial.jpg",
     "tag": "Reflexão",
     "resumo": "Use o teste do Memento Mori para distinguir entre o barulho da rotina e os valores reais.",
@@ -83,7 +81,7 @@
   },
   {
     "titulo": "Pequenas Mudanças, Grandes Transformações: O Poder do 1%",
-    "link": "posts/pequenas-mudancas-grandes-transformacoes.html",
+    "link": "posts/pequenas-mudancas-grandes-transformacoes",
     "imagem": "assets/img/transformacao.jpg",
     "tag": "Desenvolvimento",
     "resumo": "A ciência dos hábitos aplicada para gerar resultados extraordinários a longo prazo.",
@@ -91,7 +89,7 @@
   },
   {
     "titulo": "O Peso Invisível das Expectativas: Viver para Si Mesmo",
-    "link": "posts/o-peso-das-expectativas.html",
+    "link": "posts/peso-invisivel-das-expectativas",
     "imagem": "assets/img/expectativas.jpg",
     "tag": "Inteligência Emocional",
     "resumo": "Como se libertar da pressão social e do julgamento alheio usando o controle interno.",
@@ -99,7 +97,7 @@
   },
   {
     "titulo": "O Poder da Mente Estoica: Construindo uma Fortaleza Interior",
-    "link": "posts/poder-da-mente-estoica.html",
+    "link": "posts/poder-mente-estoica",
     "imagem": "assets/img/mente-estoica.jpg",
     "tag": "Filosofia",
     "resumo": "Desenvolva resiliência inabalável através dos quatro pilares da virtude clássica.",
@@ -107,7 +105,7 @@
   },
   {
     "titulo": "Minimalismo Mental: Como Destralhar a sua Mente",
-    "link": "posts/minimalismo-mental.html",
+    "link": "posts/minimalismo-mental",
     "imagem": "assets/img/minimalismo.jpg",
     "tag": "Vida Simples",
     "resumo": "Aprenda a remover o excesso de ruído cognitivo para uma vida mais leve e focada.",
@@ -115,7 +113,7 @@
   },
   {
     "titulo": "O Filtro da Atenção: A Moeda Mais Valiosa da Era Moderna",
-    "link": "posts/filtro-da-atencao.html",
+    "link": "posts/filtro-da-atencao",
     "imagem": "assets/img/atencao-digital.jpg",
     "tag": "Minimalismo Digital",
     "resumo": "Como blindar sua mente contra o sequestro digital e recuperar o foco.",
@@ -123,7 +121,7 @@
   },
   {
     "titulo": "Deixar Ir o Controle: O Segredo para uma Vida Sem Angústia",
-    "link": "posts/deixar-ir-o-controle.html",
+    "link": "posts/deixar-ir-o-controle",
     "imagem": "assets/img/deixar-ir.jpg",
     "tag": "Filosofia de Vida",
     "resumo": "A lição de Epicteto sobre focar apenas no que depende de nós.",
@@ -131,7 +129,7 @@
   },
   {
     "titulo": "Como Ganhar uma Discussão: As Lições de Arthur Schopenhauer",
-    "link": "posts/como-ganhar-uma-discussao.html",
+    "link": "posts/como-ganhar-uma-discussao",
     "imagem": "assets/img/schopenhauer.jpg",
     "tag": "Psicologia",
     "resumo": "Um mergulho na dialética erística para identificar falácias e proteger sua razão.",
@@ -139,7 +137,7 @@
   },
   {
     "titulo": "Ansiedade: O Guia Definitivo para o Retorno ao Presente",
-    "link": "posts/ansiedade-o-retorno-ao-presente.html",
+    "link": "posts/ansiedade-o-retorno-ao-presente",
     "imagem": "assets/img/ansiedade.jpg",
     "tag": "Saúde Mental",
     "resumo": "Aprenda a âncora do momento presente para silenciar as preocupações com o futuro.",
@@ -147,7 +145,7 @@
   },
   {
     "titulo": "A Ciência da Dieta Mental: Lições de Marco Aurélio",
-    "link": "posts/artigo-marco-aurelio.html",
+    "link": "posts/artigo-marco-aurelio",
     "imagem": "assets/img/marco-aurelio.jpg",
     "tag": "Filosofia Prática",
     "resumo": "Descubra como o imperador filósofo protegia sua mente de distrações externas.",
