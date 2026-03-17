@@ -291,3 +291,73 @@ footer a:hover {
 .glow-effect {
     animation: quote-glow 0.6s ease-out;
 }
+
+/* ============================================================
+   COMPONENTE DE COMPARTILHAMENTO (SHARE-COMPONENT)
+   ============================================================ */
+
+.share-container {
+    margin: 60px 0;
+    padding: 40px 20px;
+    background: var(--light-gray); /* Usando sua variável */
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.share-container p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold); /* Usando seu dourado */
+    margin-bottom: 25px;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.share-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Efeito de subir e brilhar ao passar o mouse */
+.share-btn:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    filter: brightness(1.1);
+}
+
+/* Cores Oficiais das Redes */
+.share-btn.whatsapp { background-color: #25D366; }
+.share-btn.twitter { background-color: #000000; } /* Estilo X */
+.share-btn.linkedin { background-color: #0077b5; }
+
+/* Ajuste para os ícones SVG ficarem centralizados e brancos */
+.share-btn svg {
+    fill: white;
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+
+/* Responsividade para celulares pequenos */
+@media (max-width: 480px) {
+    .share-buttons { gap: 12px; }
+    .share-btn { width: 48px; height: 48px; }
+    .share-btn svg { width: 22px; height: 22px; }
+}
