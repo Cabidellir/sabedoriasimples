@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     
     <style>
-        .archive-container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .archive-container { max-width: 900px; margin: 40px auto; padding: 0 20px; min-height: 70vh; }
         
         /* Filtros Estilizados */
         .filter-wrapper { 
@@ -64,6 +64,8 @@
         .archive-item p { color: #555; font-size: 1rem; line-height: 1.7; font-family: 'Lora', serif; }
         
         .post-meta { font-size: 0.75rem; color: #aaa; margin-top: 15px; font-family: 'Montserrat'; font-weight: 400; }
+        
+        #loading-msg { text-align: center; color: #999; padding: 40px; }
     </style>
 </head>
 <body>
@@ -85,10 +87,13 @@
     </nav>
 
     <section id="full-articles-list">
-        </section>
+        <p id="loading-msg">Consultando os pergaminhos da sabedoria...</p>
+    </section>
 </main>
 
 <footer></footer>
+
+<script src="js/main.js"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -96,16 +101,19 @@
         const filterButtons = document.querySelectorAll(".filter-btn");
         let artigosData = [];
 
-        // Mapeamento para unir tags similares em grupos mestres
         const categoriaMapa = {
             "filosofia": ["Filosofia", "Estoicismo", "Filosofia de Vida", "Filosofia da Mente"],
             "mente": ["Psicologia", "Saúde Mental", "Mistérios da Mente", "Inteligência Emocional", "Autoconhecimento", "Bem-estar"],
-            "digital": ["Minimalismo Digital", "Filosofia Prática"], // Unindo o foco em tecnologia/prática moderna
-            "pratica": ["Estratégia", "Produtividade", "Desenvolvimento", "Vida Simples", "Reflexão"]
+            "digital": ["Minimalismo Digital", "Minimalismo Mental", "Filosofia Prática"], 
+            "pratica": ["Estratégia", "Produtividade", "Desenvolvimento", "Vida Simples", "Reflexão", "Bem-estar"]
         };
 
         function renderArtigos(lista) {
             listContainer.innerHTML = "";
+            if(lista.length === 0) {
+                listContainer.innerHTML = "<p id='loading-msg'>Nenhum artigo encontrado nesta categoria.</p>";
+                return;
+            }
             lista.forEach((artigo, index) => {
                 const itemHTML = `
                     <a href="${artigo.link}" class="archive-item" style="animation-delay: ${index * 0.05}s">
@@ -120,26 +128,30 @@
         }
 
         fetch('artigos.json')
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) throw new Error("Erro ao carregar JSON");
+                return res.json();
+            })
             .then(data => {
                 artigosData = data;
                 renderArtigos(artigosData);
+            })
+            .catch(err => {
+                listContainer.innerHTML = "<p id='loading-msg'>Erro ao carregar os artigos. Verifique o arquivo artigos.json.</p>";
             });
 
         filterButtons.forEach(btn => {
             btn.addEventListener("click", () => {
                 filterButtons.forEach(b => b.classList.remove("active"));
                 btn.classList.add("active");
-
                 const grupo = btn.getAttribute("data-group");
 
                 if (grupo === "all") {
                     renderArtigos(artigosData);
                 } else {
-                    const filtrados = artigosData.filter(artigo => {
-                        // Verifica se a tag do artigo pertence ao grupo mapeado
-                        return categoriaMapa[grupo].includes(artigo.tag);
-                    });
+                    const filtrados = artigosData.filter(artigo => 
+                        categoriaMapa[grupo] && categoriaMapa[grupo].includes(artigo.tag)
+                    );
                     renderArtigos(filtrados);
                 }
             });
