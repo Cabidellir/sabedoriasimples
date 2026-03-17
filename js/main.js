@@ -86,3 +86,31 @@ function highlightActiveMenu() {
         }
     });
 }
+
+
+
+function configurarCompartilhamento() {
+    const shareContainer = document.querySelector('.share-buttons');
+    if (!shareContainer) return;
+
+    const urlBase = window.location.href;
+    const titulo = document.title;
+
+    // Seleciona os links específicos pelas classes
+    const btnWhats = shareContainer.querySelector('.whatsapp');
+    const btnTwitter = shareContainer.querySelector('.twitter');
+    const btnLinkedin = shareContainer.querySelector('.linkedin');
+
+    if (btnWhats) {
+        btnWhats.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(titulo + " - " + urlBase)}`;
+    }
+    if (btnTwitter) {
+        btnTwitter.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(titulo)}&url=${encodeURIComponent(urlBase)}`;
+    }
+    if (btnLinkedin) {
+        btnLinkedin.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(urlBase)}`;
+    }
+}
+
+// Chama a função após o DOM carregar
+document.addEventListener("DOMContentLoaded", configurarCompartilhamento);
