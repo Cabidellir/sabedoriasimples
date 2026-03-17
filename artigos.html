@@ -6,57 +6,59 @@
     <title>Biblioteca de Sabedoria | Todos os Artigos | Sabedoria Simples</title>
     <meta name="description" content="Explore nossa coleção completa de artigos sobre estoicismo, minimalismo digital, saúde mental e filosofia prática.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     
     <style>
         .archive-container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
         
+        /* Estilos dos Filtros */
+        .filter-wrapper { 
+            display: flex; 
+            justify-content: center; 
+            gap: 10px; 
+            margin-bottom: 50px; 
+            flex-wrap: wrap; 
+        }
+
+        .filter-btn {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #666;
+        }
+
+        .filter-btn:hover { border-color: #C6A667; color: #C6A667; }
+        .filter-btn.active { background: #C6A667; border-color: #C6A667; color: #fff; box-shadow: 0 4px 15px rgba(198, 166, 103, 0.2); }
+
+        /* Estilos dos Itens */
         .archive-item { 
             display: flex; 
             flex-direction: column; 
             margin-bottom: 35px; 
             padding-bottom: 25px; 
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #f5f5f5;
             transition: all 0.3s ease;
             text-decoration: none;
             color: inherit;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .archive-item:hover { transform: translateX(10px); }
-        
-        .archive-item .category { 
-            font-size: 0.75rem; 
-            text-transform: uppercase; 
-            color: #C6A667; 
-            font-weight: 800; 
-            margin-bottom: 8px;
-            letter-spacing: 1px;
-        }
-
-        .archive-item h2 { 
-            margin: 5px 0; 
-            font-size: 1.8rem; 
-            line-height: 1.2; 
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-        }
-
-        .archive-item p { 
-            color: #666; 
-            font-size: 1rem; 
-            line-height: 1.6; 
-            margin-top: 12px; 
-            font-family: 'Lora', serif;
-        }
-        
-        .post-info { 
-            font-size: 0.8rem; 
-            color: #999; 
-            margin-top: 15px; 
-            display: flex; 
-            gap: 15px;
-            font-family: 'Montserrat', sans-serif;
-        }
+        .archive-item .category { font-size: 0.75rem; text-transform: uppercase; color: #C6A667; font-weight: 800; margin-bottom: 8px; letter-spacing: 1px; }
+        .archive-item h2 { margin: 5px 0; font-size: 1.8rem; line-height: 1.2; font-family: 'Montserrat', sans-serif; font-weight: 700; }
+        .archive-item p { color: #666; font-size: 1rem; line-height: 1.6; margin-top: 12px; font-family: 'Lora', serif; }
+        .post-info { font-size: 0.8rem; color: #999; margin-top: 15px; display: flex; gap: 15px; font-family: 'Montserrat', sans-serif; }
 
         #loading-msg { text-align: center; padding: 50px; color: #bbb; font-style: italic; }
     </style>
@@ -66,10 +68,18 @@
 <header></header>
 
 <main class="archive-container">
-    <header style="text-align: center; margin-bottom: 60px;">
+    <header style="text-align: center; margin-bottom: 40px;">
         <h1 style="font-size: 3rem; font-family: 'Montserrat'; font-weight: 800;">Biblioteca de Sabedoria</h1>
-        <p style="color: #777; font-size: 1.1rem;">Uma cronologia de reflexões para uma vida equilibrada.</p>
+        <p style="color: #777; font-size: 1.1rem;">Filtre por categoria e explore os ensinamentos.</p>
     </header>
+
+    <nav class="filter-wrapper" id="filter-navigation">
+        <button class="filter-btn active" data-tag="all">Todos</button>
+        <button class="filter-btn" data-tag="Psicologia e Lógica">Psicologia</button>
+        <button class="filter-btn" data-tag="Filosofia e Bem-Estar">Filosofia</button>
+        <button class="filter-btn" data-tag="Minimalismo Digital">Digital</button>
+        <button class="filter-btn" data-tag="Filosofia Prática">Prática</button>
+    </nav>
 
     <section class="articles-list" id="full-articles-list">
         <p id="loading-msg">Consultando os pergaminhos da sabedoria...</p>
@@ -83,31 +93,63 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const listContainer = document.getElementById("full-articles-list");
-        
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        let todosOsArtigos = [];
+
+        // Função para renderizar os artigos na tela
+        function renderArtigos(lista) {
+            listContainer.innerHTML = "";
+            if (lista.length === 0) {
+                listContainer.innerHTML = "<p style='text-align:center; color:#999;'>Nenhum artigo encontrado nesta categoria.</p>";
+                return;
+            }
+
+            lista.forEach(artigo => {
+                const itemHTML = `
+                    <a href="${artigo.link}" class="archive-item">
+                        <span class="category">${artigo.tag}</span>
+                        <h2>${artigo.titulo}</h2>
+                        <p>${artigo.resumo}</p>
+                        <div class="post-info">
+                            <span>${artigo.data}</span>
+                            <span>• 12 min de leitura</span>
+                        </div>
+                    </a>
+                `;
+                listContainer.innerHTML += itemHTML;
+            });
+        }
+
+        // 1. Carregar o JSON
         fetch('artigos.json')
             .then(response => response.json())
             .then(artigos => {
-                listContainer.innerHTML = "";
-
-                artigos.forEach(artigo => {
-                    const itemHTML = `
-                        <a href="${artigo.link}" class="archive-item">
-                            <span class="category">${artigo.tag}</span>
-                            <h2>${artigo.titulo}</h2>
-                            <p>${artigo.resumo}</p>
-                            <div class="post-info">
-                                <span>${artigo.data}</span>
-                                <span>• 8 min de leitura</span>
-                            </div>
-                        </a>
-                    `;
-                    listContainer.innerHTML += itemHTML;
-                });
+                todosOsArtigos = artigos;
+                renderArtigos(todosOsArtigos); // Inicializa com todos
             })
             .catch(error => {
-                console.error('Erro ao carregar biblioteca:', error);
-                listContainer.innerHTML = "<p>Erro ao carregar os artigos. Por favor, tente novamente mais tarde.</p>";
+                console.error('Erro:', error);
+                listContainer.innerHTML = "<p>Erro ao carregar biblioteca.</p>";
             });
+
+        // 2. Lógica dos Botões de Filtro
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                // Mudar estado visual do botão
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                const tagSelecionada = button.getAttribute("data-tag");
+
+                // Filtrar array de artigos
+                if (tagSelecionada === "all") {
+                    renderArtigos(todosOsArtigos);
+                } else {
+                    const filtrados = todosOsArtigos.filter(artigo => artigo.tag === tagSelecionada);
+                    renderArtigos(filtrados);
+                }
+            });
+        });
     });
 </script>
 
