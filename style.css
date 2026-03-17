@@ -361,3 +361,22 @@ footer a:hover {
     .share-btn { width: 48px; height: 48px; }
     .share-btn svg { width: 22px; height: 22px; }
 }
+
+
+/* AJUSTES DE IMAGEM DO POST */
+.post-featured-image {
+    width: 100%;             /* Ocupa 100% da largura do container (800px) */
+    max-width: 100%;         /* Garante que nunca transborde */
+    height: auto;            /* Mantém a proporção (não achata) */
+    display: block;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Garante que qualquer outra imagem dentro do post também se comporte */
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
