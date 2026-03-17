@@ -1,5 +1,13 @@
 [
   {
+    "titulo": "Nietzsche e a Arte da Superação: Torna-te Quem Tu És",
+    "tag": "Filosofia da Mente",
+    "imagem": "assets/img/nietzsche-superacao.png",
+    "resumo": "Aprenda como transformar dor em poder através dos conceitos de Amor Fati e Vontade de Poder do filósofo Friedrich Nietzsche.",
+    "link": "posts/nietzsche-superacao-pessoal.html",
+    "data": "19 de Março de 2026"
+  },
+  {
     "titulo": "Como aplicar o Estoicismo na era da ansiedade digital",
     "tag": "Filosofia Prática",
     "imagem": "assets/img/estoicismo-ansiedade-digital.png",
