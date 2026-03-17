@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-    // 1. Carregamento de Componentes (Header/Footer)
+    // 1. Carregamento de Componentes (Header/Footer/Share)
     function loadComponent(selector, file) {
         const element = document.querySelector(selector);
         if (!element) return;
 
+        // Tenta carregar da raiz, se falhar tenta subir um nível (para posts)
         fetch('/' + file)
             .then(response => {
                 if (!response.ok) return fetch(file);
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(data => {
                 element.innerHTML = data;
 
-                // Correção de links para subpastas
+                // Correção de links para subpastas (apenas para header/footer)
                 const links = element.querySelectorAll('a');
                 const isInSubfolder = window.location.pathname.includes('/posts/');
 
@@ -29,33 +30,55 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 });
 
+                // Se for o header, destaca o menu
                 if (selector === 'header') highlightActiveMenu();
+                
+                // SE FOR O SHARE, configura os links após carregar o HTML
+                if (selector === 'share-component') configurarCompartilhamento();
             })
             .catch(err => console.warn("Erro ao carregar componente: " + file));
     }
 
+    // Carrega os 3 componentes da raiz
     loadComponent('header', 'header.html');
     loadComponent('footer', 'footer.html');
+    loadComponent('share-component', 'share.html'); // Novo componente na raiz
 
-    // 2. Renderização Dinâmica dos 15 Artigos
+    // 2. Renderização Dinâmica dos Artigos
     const gridArtigos = document.getElementById('grid-artigos');
     if (gridArtigos) {
-        // Busca o JSON (ajusta o caminho se estiver dentro de /posts/ ou na raiz)
         const jsonPath = window.location.pathname.includes('/posts/') ? '../js/artigos.json' : 'js/artigos.json';
         
         fetch(jsonPath)
             .then(res => res.json())
             .then(artigos => {
-                console.log("Total de artigos carregados:", artigos.length); // Validação no console
                 renderizarCards(artigos, gridArtigos);
             })
             .catch(err => console.error("Erro ao carregar artigos.json", err));
     }
 });
 
-// Função Auxiliar para Criar os Cards HTML
+// --- FUNÇÕES AUXILIARES ---
+
+function configurarCompartilhamento() {
+    // Agora o seletor busca dentro do componente recém-carregado
+    const shareContainer = document.querySelector('.share-buttons');
+    if (!shareContainer) return;
+
+    const urlBase = window.location.href;
+    const titulo = document.title;
+
+    const btnWhats = shareContainer.querySelector('.whatsapp');
+    const btnTwitter = shareContainer.querySelector('.twitter');
+    const btnLinkedin = shareContainer.querySelector('.linkedin');
+
+    if (btnWhats) btnWhats.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(titulo + " - " + urlBase)}`;
+    if (btnTwitter) btnTwitter.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(titulo)}&url=${encodeURIComponent(urlBase)}`;
+    if (btnLinkedin) btnLinkedin.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(urlBase)}`;
+}
+
 function renderizarCards(artigos, container) {
-    container.innerHTML = ""; // Limpa o container
+    container.innerHTML = ""; 
     artigos.forEach(artigo => {
         const card = document.createElement('div');
         card.className = 'post-card';
@@ -77,40 +100,13 @@ function renderizarCards(artigos, container) {
 function highlightActiveMenu() {
     const currentPage = window.location.pathname;
     const menuLinks = document.querySelectorAll("#menu ul li a");
-    
     menuLinks.forEach(link => {
         const href = link.getAttribute("href");
-        const cleanHref = href.replace('../', '');
-        if (currentPage.includes(cleanHref) && cleanHref !== "index.html") {
-            link.classList.add("active");
+        if(href) {
+            const cleanHref = href.replace('../', '');
+            if (currentPage.includes(cleanHref) && cleanHref !== "index.html") {
+                link.classList.add("active");
+            }
         }
     });
 }
-
-
-
-function configurarCompartilhamento() {
-    const shareContainer = document.querySelector('.share-buttons');
-    if (!shareContainer) return;
-
-    const urlBase = window.location.href;
-    const titulo = document.title;
-
-    // Seleciona os links específicos pelas classes
-    const btnWhats = shareContainer.querySelector('.whatsapp');
-    const btnTwitter = shareContainer.querySelector('.twitter');
-    const btnLinkedin = shareContainer.querySelector('.linkedin');
-
-    if (btnWhats) {
-        btnWhats.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(titulo + " - " + urlBase)}`;
-    }
-    if (btnTwitter) {
-        btnTwitter.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(titulo)}&url=${encodeURIComponent(urlBase)}`;
-    }
-    if (btnLinkedin) {
-        btnLinkedin.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(urlBase)}`;
-    }
-}
-
-// Chama a função após o DOM carregar
-document.addEventListener("DOMContentLoaded", configurarCompartilhamento);
