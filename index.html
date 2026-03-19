@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -35,96 +34,22 @@
     
     <style>
         :root { --gold: #C6A667; --dark: #1a1a1a; }
-        
-        .portal-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .portal-card {
-            background: #fff;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s ease;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .portal-card:hover {
-            border-bottom: 3px solid var(--gold);
-            transform: translateY(-5px);
-        }
-
-        .portal-thumbnail {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            background: #eee;
-        }
-
+        .portal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; padding: 20px; max-width: 1200px; margin: 0 auto; }
+        .portal-card { background: #fff; border-bottom: 3px solid transparent; transition: all 0.3s ease; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+        .portal-card:hover { border-bottom: 3px solid var(--gold); transform: translateY(-5px); }
+        .portal-thumbnail { width: 100%; height: 200px; object-fit: cover; background: #eee; }
         .portal-content { padding: 15px 0; }
-        
-        .portal-tag {
-            color: var(--gold);
-            text-transform: uppercase;
-            font-size: 0.7rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
-
-        .portal-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin: 8px 0;
-            line-height: 1.3;
-        }
-
-        .portal-excerpt {
-            font-size: 0.9rem;
-            color: #666;
-            line-height: 1.5;
-        }
-
-        /* Hero Section Dinâmico */
-        .hero-portal {
-            max-width: 1200px;
-            margin: 20px auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
-            padding: 0 20px;
-            min-height: 450px;
-        }
-
+        .portal-tag { color: var(--gold); text-transform: uppercase; font-size: 0.7rem; font-weight: 800; letter-spacing: 1px; }
+        .portal-title { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 700; margin: 8px 0; line-height: 1.3; }
+        .portal-excerpt { font-size: 0.9rem; color: #666; line-height: 1.5; }
+        .hero-portal { max-width: 1200px; margin: 20px auto; display: grid; grid-template-columns: 2fr 1fr; gap: 20px; padding: 0 20px; min-height: 450px; }
         @media (max-width: 768px) { .hero-portal { grid-template-columns: 1fr; } }
-
-        .main-featured {
-            position: relative;
-            height: 450px;
-            overflow: hidden;
-            border-radius: 4px;
-            display: block;
-            text-decoration: none;
-        }
-
+        .main-featured { position: relative; height: 450px; overflow: hidden; border-radius: 4px; display: block; text-decoration: none; background: #f0f0f0; }
         .main-featured img { width: 100%; height: 100%; object-fit: cover; }
-
-        .main-featured-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 40px 20px 20px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.9));
-            color: white;
-        }
+        .main-featured-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 40px 20px 20px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: white; }
+        
+        /* Estilo para não quebrar o layout do Fallback */
+        .seo-fallback { padding: 20px; max-width: 1200px; margin: 0 auto; border: 1px dashed #eee; display: none; }
     </style>
 </head>
 
@@ -133,25 +58,22 @@
 <header></header>
 
 <noscript>
-    <section class="seo-fallback">
-        <h2>Reflexões sobre Estoicismo e Minimalismo Digital</h2>
-        <p>O Sabedoria Simples é um portal dedicado à filosofia prática. Explore nossos artigos sobre como Marco Aurélio e Sêneca podem ajudar na ansiedade digital, técnicas de Deep Work e a neurociência dos hábitos.</p>
-        <ul>
-            <li><a href="posts/estoicismo-ansiedade-digital.html">Estoicismo e Ansiedade Digital</a></li>
-            <li><a href="posts/filtro-da-atencao.html">O Filtro da Atenção</a></li>
-            </ul>
+    <section style="padding: 40px; text-align: center;">
+        <h2>Bem-vindo ao Sabedoria Simples</h2>
+        <p>Explore lições de <strong>Estoicismo</strong>, <strong>Minimalismo Digital</strong> e <strong>Psicologia</strong>.</p>
+        <p>Nossos artigos principais incluem estratégias de Marco Aurélio para ansiedade e o uso do tempo segundo Sêneca.</p>
+        <nav>
+            <a href="artigos.html">Ver todos os artigos</a>
+        </nav>
     </section>
 </noscript>
-    
 
 <main>
     <section class="hero-portal" id="hero-area">
         <div class="main-featured">
-            <div class="main-featured-overlay">
-                <h1 style="font-size: 2rem; font-family: 'Montserrat'; margin: 10px 0;">
-                    Sabedoria Simples: Lições de Estoicismo e Mistérios da Mente
-                </h1>
-            </div>
+             <div class="main-featured-overlay">
+                <p>Carregando sabedoria...</p>
+             </div>
         </div>
     </section>
 
@@ -175,30 +97,31 @@
             .then(artigos => {
                 if(artigos.length === 0) return;
 
-                // 1. Destaque Principal - AJUSTADO PARA H1 (Exigência SEO)
+                // 1. Destaque Principal (H1 Único da Página)
                 const principal = artigos[0];
                 let heroHTML = `
                     <a href="${principal.link}" class="main-featured">
                         <img src="${principal.imagem}" alt="${principal.titulo}">
                         <div class="main-featured-overlay">
                             <span class="portal-tag">${principal.tag}</span>
-                            <h1 style="font-size: 2rem; font-family: 'Montserrat'; margin: 10px 0;">${principal.titulo}</h1>
+                            <h1 style="font-size: 2.3rem; font-family: 'Montserrat'; margin: 10px 0;">${principal.titulo}</h1>
+                            <p style="font-family: 'Lora'; opacity: 0.9;">${principal.resumo}</p>
                         </div>
                     </a>
                     <div id="side-featured" style="display: flex; flex-direction: column; gap: 20px;"></div>
                 `;
                 heroArea.innerHTML = heroHTML;
 
-                // 2. Destaques Laterais
+                // 2. Destaques Laterais (H3)
                 const sideFeatured = document.getElementById("side-featured");
                 for (let i = 1; i <= 2; i++) {
                     if(artigos[i]) {
                         sideFeatured.innerHTML += `
                             <a href="${artigos[i].link}" class="portal-card">
-                                <img src="${artigos[i].imagem}" class="portal-thumbnail" style="height: 150px;">
+                                <img src="${artigos[i].imagem}" class="portal-thumbnail" style="height: 150px;" alt="${artigos[i].titulo}">
                                 <div class="portal-content">
                                     <span class="portal-tag">${artigos[i].tag}</span>
-                                    <h3 class="portal-title" style="font-size: 1rem;">${artigos[i].titulo}</h3>
+                                    <h3 class="portal-title" style="font-size: 1.1rem;">${artigos[i].titulo}</h3>
                                 </div>
                             </a>
                         `;
@@ -214,7 +137,7 @@
                                 <span class="portal-tag">${artigo.tag}</span>
                                 <h3 class="portal-title">${artigo.titulo}</h3>
                                 <p class="portal-excerpt">${artigo.resumo}</p>
-                                <span style="font-size:0.7rem; color:#bbb;">${artigo.data}</span>
+                                <span style="font-size:0.75rem; color:#bbb; font-family: Montserrat;">${artigo.data}</span>
                             </div>
                         </a>
                     `;
