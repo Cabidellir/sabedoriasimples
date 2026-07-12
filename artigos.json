@@ -1,11 +1,21 @@
 [
   {
+    "titulo": "A Filosofia do Suficiente: Como Parar de Querer Sempre Mais",
+    "tag": "Filosofia Prática",
+    "imagem": "assets/img/essencial.jpg",
+    "resumo": "Em um mundo que nos empurra para querer sempre mais, a verdadeira sabedoria pode estar em reconhecer quando já temos o bastante.",
+    "link": "posts/a-filosofia-do-suficiente.html",
+    "data": "12 de Julho de 2026",
+    "leitura": "8 min"
+  },
+  {
     "titulo": "Nietzsche e a Arte da Superação: Torna-te Quem Tu És",
     "tag": "Filosofia da Mente",
     "imagem": "assets/img/nietzsche-superacao.jpg",
     "resumo": "Aprenda como transformar dor em poder através dos conceitos de Amor Fati e Vontade de Poder do filósofo Friedrich Nietzsche.",
     "link": "posts/nietzsche-superacao-pessoal.html",
-    "data": "19 de Março de 2026"
+    "data": "19 de Março de 2026",
+    "leitura": "9 min"
   },
   {
     "titulo": "Como aplicar o Estoicismo na era da ansiedade digital",
@@ -13,174 +23,196 @@
     "imagem": "assets/img/estoicismo-ansiedade-digital.png",
     "resumo": "Um guia profundo sobre como as lições de Marco Aurélio e Sêneca podem proteger sua mente no caos das redes sociais e do vício em notificações.",
     "link": "posts/estoicismo-ansiedade-digital.html",
-    "data": "12 de Março de 2026"
+    "data": "12 de Março de 2026",
+    "leitura": "11 min"
   },
   {
     "titulo": "Sêneca: O Valor do Tempo e a Arte de Não Desperdiçar a Vida",
-    "link": "posts/seneca-o-valor-do-tempo",
+    "link": "posts/seneca-o-valor-do-tempo.html",
     "imagem": "assets/img/memento-mori.jpg",
     "tag": "Estoicismo",
     "resumo": "A vida não é curta, nós é que a desperdiçamos. Explore as lições de Sêneca sobre como gerir o seu recurso mais precioso e viver com propósito.",
-    "data": "11 de Fevereiro, 2026"
+    "data": "11 de Fevereiro, 2026",
+    "leitura": "7 min"
   },
   {
     "titulo": "A Neurociência do Hábito: Reprogramando a sua Arquitetura Cerebral",
-    "link": "posts/neurociencia-do-habito",
+    "link": "posts/neurociencia-do-habito.html",
     "imagem": "assets/img/habitos-progresso.jpg",
     "tag": "Mistérios da Mente",
     "resumo": "Entenda como os gânglios basais e a neuroplasticidade moldam sua rotina e aprenda estratégias científicas para mudar comportamentos difíceis.",
-    "data": "10 de Fevereiro, 2026"
+    "data": "10 de Fevereiro, 2026",
+    "leitura": "8 min"
   },
   {
     "titulo": "O Sentido da Vida em Tempos de Crise: A Sabedoria de Viktor Frankl",
-    "link": "posts/o-sentido-da-vida-viktor-frankl",
+    "link": "posts/o-sentido-da-vida-viktor-frankl.html",
     "imagem": "assets/img/viktor-frankl.jpg",
     "tag": "Psicologia",
     "resumo": "Descubra como a Logoterapia e as lições de Viktor Frankl podem ajudar-nos a encontrar propósito mesmo nas situações mais difíceis.",
-    "data": "06 de Fevereiro, 2026"
+    "data": "06 de Fevereiro, 2026",
+    "leitura": "10 min"
   },
   {
     "titulo": "O Príncipe no Escritório: Maquiavelismo Prático para a Carreira Moderna",
-    "link": "posts/o-principe-no-escritorio",
+    "link": "posts/o-principe-no-escritorio.html",
     "imagem": "assets/img/maquiavel-carreira.jpg",
     "tag": "Estratégia",
     "resumo": "Saiba como o realismo de Nicolau Maquiavel pode ser a chave para navegar nas complexas dinâmicas de poder do mundo corporativo atual.",
-    "data": "05 de Fevereiro, 2026"
+    "data": "05 de Fevereiro, 2026",
+    "leitura": "9 min"
   },
   {
     "titulo": "A Sabedoria dos Antigos: Como a Filosofia Grega Moldou o Pensamento Ocidental",
-    "link": "posts/a-sabedoria-dos-antigos",
+    "link": "posts/a-sabedoria-dos-antigos.html",
     "imagem": "assets/img/filosofia-grega.jpg",
     "tag": "Filosofia",
     "resumo": "Explore como Sócrates, Platão e Aristóteles lançaram as bases do pensamento ocidental.",
-    "data": "04 de Fevereiro, 2026"
+    "data": "04 de Fevereiro, 2026",
+    "leitura": "7 min"
   },
   {
     "titulo": "A Arte de Estar Só: Transformando Solidão em Solitude",
-    "link": "posts/a-arte-de-estar-so",
+    "link": "posts/a-arte-de-estar-so.html",
     "imagem": "assets/img/solitude.jpg",
     "tag": "Autoconhecimento",
     "resumo": "Descubra como transformar o medo de ficar sozinho na sua maior fonte de força e criatividade.",
-    "data": "15 de Janeiro, 2026"
+    "data": "15 de Janeiro, 2026",
+    "leitura": "8 min"
   },
   {
     "titulo": "Minimalismo Digital: Como Retomar o Controle da Sua Atenção",
-    "link": "posts/minimalismo-digital",
+    "link": "posts/minimalismo-digital.html",
     "imagem": "assets/img/minimalismo-digital.png",
     "tag": "Filosofia Prática",
     "resumo": "Aprenda como a filosofia estoica e o minimalismo podem ajudar você a vencer o vício em celular.",
-    "data": "10 de Janeiro, 2026"
+    "data": "10 de Janeiro, 2026",
+    "leitura": "9 min"
   },
   {
     "titulo": "A Neurociência da Intuição: Por que seu instinto raramente falha",
-    "link": "posts/neurociencia-da-intuicao",
+    "link": "posts/neurociencia-da-intuicao.html",
     "imagem": "assets/img/neurociencia-intuicao.jpg",
     "tag": "Mistérios da Mente",
     "resumo": "A intuição não é magia, é biologia. Descubra como o seu cérebro processa decisões antes da lógica.",
-    "data": "09 de Janeiro, 2026"
+    "data": "09 de Janeiro, 2026",
+    "leitura": "7 min"
   },
   {
     "titulo": "O Valor do Silêncio: Por Que a Quietude é a Sua Melhor Estratégia",
-    "link": "posts/valor-do-silencio",
+    "link": "posts/valor-do-silencio.html",
     "imagem": "assets/img/silencio.jpg",
     "tag": "Autoconhecimento",
     "resumo": "Descubra como o silêncio regenera o cérebro e oferece a clareza necessária para grandes decisões.",
-    "data": "05 de Janeiro, 2026"
+    "data": "05 de Janeiro, 2026",
+    "leitura": "6 min"
   },
   {
     "titulo": "A Sabedoria de Ser Imperfeito: O Fim da Tirania do Perfeccionismo",
-    "link": "posts/sabedoria-de-ser-imperfeito",
+    "link": "posts/sabedoria-de-ser-imperfeito.html",
     "imagem": "assets/img/imperfeicao.jpg",
     "tag": "Bem-estar",
     "resumo": "A arte do Kintsugi aplicada à vida: como aceitar suas falhas e transformá-las em força.",
-    "data": "02 de Janeiro, 2026"
+    "data": "02 de Janeiro, 2026",
+    "leitura": "8 min"
   },
   {
     "titulo": "A Arte de Acordar para a Vida: Manhãs com Propósito",
-    "link": "posts/arte-de-acordar-para-a-vida",
+    "link": "posts/arte-de-acordar-para-a-vida.html",
     "imagem": "assets/img/rotina-matinal.jpg",
     "tag": "Produtividade",
     "resumo": "Vença a preguiça matinal e comece seu dia com a intenção e a disciplina de um imperador.",
-    "data": "30 de Dezembro, 2025"
+    "data": "30 de Dezembro, 2025",
+    "leitura": "7 min"
   },
   {
     "titulo": "O Que Realmente Importa: Priorizando o Essencial",
-    "link": "posts/o-que-realmente-importa",
+    "link": "posts/o-que-realmente-importa.html",
     "imagem": "assets/img/essencial.jpg",
     "tag": "Reflexão",
     "resumo": "Use o teste do Memento Mori para distinguir entre o barulho da rotina e os valores reais.",
-    "data": "25 de Dezembro, 2025"
+    "data": "25 de Dezembro, 2025",
+    "leitura": "6 min"
   },
   {
     "titulo": "Pequenas Mudanças, Grandes Transformações: O Poder do 1%",
-    "link": "posts/pequenas-mudancas-grandes-transformacoes",
+    "link": "posts/pequenas-mudancas-grandes-transformacoes.html",
     "imagem": "assets/img/transformacao.jpg",
     "tag": "Desenvolvimento",
     "resumo": "A ciência dos hábitos aplicada para gerar resultados extraordinários a longo prazo.",
-    "data": "20 de Dezembro, 2025"
+    "data": "20 de Dezembro, 2025",
+    "leitura": "7 min"
   },
   {
     "titulo": "O Peso Invisível das Expectativas: Viver para Si Mesmo",
-    "link": "posts/peso-invisivel-das-expectativas",
+    "link": "posts/peso-invisivel-das-expectativas.html",
     "imagem": "assets/img/expectativas.jpg",
     "tag": "Inteligência Emocional",
     "resumo": "Como se libertar da pressão social e do julgamento alheio usando o controle interno.",
-    "data": "15 de Dezembro, 2025"
+    "data": "15 de Dezembro, 2025",
+    "leitura": "8 min"
   },
   {
     "titulo": "O Poder da Mente Estoica: Construindo uma Fortaleza Interior",
-    "link": "posts/poder-mente-estoica",
+    "link": "posts/poder-mente-estoica.html",
     "imagem": "assets/img/mente-estoica.jpg",
     "tag": "Filosofia",
     "resumo": "Desenvolva resiliência inabalável através dos quatro pilares da virtude clássica.",
-    "data": "10 de Dezembro, 2025"
+    "data": "10 de Dezembro, 2025",
+    "leitura": "9 min"
   },
   {
     "titulo": "Minimalismo Mental: Como Destralhar a sua Mente",
-    "link": "posts/minimalismo-mental",
+    "link": "posts/minimalismo-mental.html",
     "imagem": "assets/img/minimalismo.jpg",
     "tag": "Vida Simples",
     "resumo": "Aprenda a remover o excesso de ruído cognitivo para uma vida mais leve e focada.",
-    "data": "05 de Dezembro, 2025"
+    "data": "05 de Dezembro, 2025",
+    "leitura": "6 min"
   },
   {
     "titulo": "O Filtro da Atenção: A Moeda Mais Valiosa da Era Moderna",
-    "link": "posts/filtro-da-atencao",
+    "link": "posts/filtro-da-atencao.html",
     "imagem": "assets/img/atencao-digital.jpg",
     "tag": "Minimalismo Digital",
     "resumo": "Como blindar sua mente contra o sequestro digital e recuperar o foco.",
-    "data": "01 de Dezembro, 2025"
+    "data": "01 de Dezembro, 2025",
+    "leitura": "8 min"
   },
   {
     "titulo": "Deixar Ir o Controle: O Segredo para uma Vida Sem Angústia",
-    "link": "posts/deixar-ir-o-controle",
+    "link": "posts/deixar-ir-o-controle.html",
     "imagem": "assets/img/deixar-ir.jpg",
     "tag": "Filosofia de Vida",
     "resumo": "A lição de Epicteto sobre focar apenas no que depende de nós.",
-    "data": "25 de Novembro, 2025"
+    "data": "25 de Novembro, 2025",
+    "leitura": "7 min"
   },
   {
     "titulo": "Como Ganhar uma Discussão: As Lições de Arthur Schopenhauer",
-    "link": "posts/como-ganhar-uma-discussao",
+    "link": "posts/como-ganhar-uma-discussao.html",
     "imagem": "assets/img/schopenhauer.jpg",
     "tag": "Psicologia",
     "resumo": "Um mergulho na dialética erística para identificar falácias e proteger sua razão.",
-    "data": "20 de Novembro, 2025"
+    "data": "20 de Novembro, 2025",
+    "leitura": "8 min"
   },
   {
     "titulo": "Ansiedade: O Guia Definitivo para o Retorno ao Presente",
-    "link": "posts/ansiedade-o-retorno-ao-presente",
+    "link": "posts/ansiedade-o-retorno-ao-presente.html",
     "imagem": "assets/img/ansiedade.jpg",
     "tag": "Saúde Mental",
     "resumo": "Aprenda a âncora do momento presente para silenciar as preocupações com o futuro.",
-    "data": "15 de Novembro, 2025"
+    "data": "15 de Novembro, 2025",
+    "leitura": "10 min"
   },
   {
     "titulo": "A Ciência da Dieta Mental: Lições de Marco Aurélio",
-    "link": "posts/artigo-marco-aurelio",
+    "link": "posts/artigo-marco-aurelio.html",
     "imagem": "assets/img/marco-aurelio.jpg",
     "tag": "Filosofia Prática",
     "resumo": "Descubra como o imperador filósofo protegia sua mente de distrações externas.",
-    "data": "10 de Novembro, 2025"
+    "data": "10 de Novembro, 2025",
+    "leitura": "7 min"
   }
 ]
