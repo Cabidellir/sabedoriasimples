@@ -1,5 +1,14 @@
 [
   {
+    "titulo": "O Poder do Tédio Criativo: Por Que Parar de Fugir do Silêncio",
+    "tag": "Psicologia & Autoconhecimento",
+    "imagem": "assets/img/tedio-criativo.jpg",
+    "resumo": "Em um mundo viciado em estímulos constantes, o tédio pode ser o espaço mais criativo que temos. Descubra como protegê-lo.",
+    "link": "posts/o-poder-do-tedio-criativo.html",
+    "data": "15 de Julho de 2026",
+    "leitura": "8 min"
+  },
+  {
     "titulo": "A Verdadeira Liderança: A Arte de Influenciar sem Autoridade",
     "tag": "Liderança & Autoconhecimento",
     "imagem": "assets/img/lideranca-influencia.jpg",
