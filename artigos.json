@@ -1,5 +1,14 @@
 [
   {
+    "titulo": "A Verdadeira Liderança: A Arte de Influenciar sem Autoridade",
+    "tag": "Liderança & Autoconhecimento",
+    "imagem": "assets/img/habitos-progresso.jpg",
+    "resumo": "Liderar não é ter cargo. É a capacidade de fazer as pessoas agirem mesmo quando elas resistem. Descubra como desenvolver influência real.",
+    "link": "posts/a-verdadeira-lideranca-influencia.html",
+    "data": "14 de Julho de 2026",
+    "leitura": "9 min"
+  },
+  {
     "titulo": "A Filosofia do Suficiente: Como Parar de Querer Sempre Mais",
     "tag": "Filosofia Prática",
     "imagem": "assets/img/essencial.jpg",
