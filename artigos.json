@@ -1,5 +1,14 @@
 [
   {
+    "titulo": "Como Dar Feedback que Realmente Ajuda as Pessoas a Crescerem",
+    "tag": "Liderança & Autoconhecimento",
+    "imagem": "assets/img/feedback-significativo.jpg",
+    "resumo": "Dar feedback não é apontar erros. É ajudar a outra pessoa a crescer. Aprenda a fazer isso de forma eficaz e humana.",
+    "link": "posts/como-dar-feedback-que-realmente-ajuda.html",
+    "data": "18 de Julho de 2026",
+    "leitura": "8 min"
+  },
+  {
     "titulo": "Como Recuperar o Controle da Sua Atenção em 2026",
     "tag": "Minimalismo Digital",
     "imagem": "assets/img/recuperar-atencao.jpg",
@@ -85,7 +94,7 @@
     "link": "posts/o-sentido-da-vida-viktor-frankl.html",
     "imagem": "assets/img/viktor-frankl.jpg",
     "tag": "Psicologia",
-    "resumo": "Descubra como a Logoterapia e as lições de Viktor Frankl podem ajudar-nos a encontrar propósito mesmo nas situações mais difíceis.",
+    "resumo": "Descubra como a Logoterapia e as lições de Viktor Frankl podem ajudar-nos a encontrar propósito mesmo nas situações mais difícis.",
     "data": "06 de Fevereiro, 2026",
     "leitura": "10 min"
   },
