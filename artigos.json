@@ -1,5 +1,14 @@
 [
   {
+    "titulo": "Os Mecanismos Psicológicos que as Pessoas Usam para te Controlar",
+    "tag": "Psicologia & Autoconhecimento",
+    "imagem": "assets/img/mecanismos-controle.jpg",
+    "resumo": "Entenda os principais truques psicológicos usados para manipular e controlar pessoas — e como se proteger sem se tornar cínico.",
+    "link": "posts/os-mecanismos-psicologicos-que-as-pessoas-usam-para-te-controlar.html",
+    "data": "16 de Julho de 2026",
+    "leitura": "10 min"
+  },
+  {
     "titulo": "Como Dar Feedback que Realmente Ajuda as Pessoas a Crescerem",
     "tag": "Liderança & Autoconhecimento",
     "imagem": "assets/img/feedback-significativo.jpg",
@@ -94,7 +103,7 @@
     "link": "posts/o-sentido-da-vida-viktor-frankl.html",
     "imagem": "assets/img/viktor-frankl.jpg",
     "tag": "Psicologia",
-    "resumo": "Descubra como a Logoterapia e as lições de Viktor Frankl podem ajudar-nos a encontrar propósito mesmo nas situações mais difícis.",
+    "resumo": "Descubra como a Logoterapia e as lições de Viktor Frankl podem ajudar-nos a encontrar propósito mesmo nas situações mais difíceis.",
     "data": "06 de Fevereiro, 2026",
     "leitura": "10 min"
   },
