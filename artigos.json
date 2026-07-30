@@ -1,5 +1,41 @@
 [
   {
+    "titulo": "Como Parar de Se Comparar e Começar a Viver a Sua Própria Vida",
+    "tag": "Autoconhecimento",
+    "imagem": "assets/img/parar-comparar.jpg",
+    "resumo": "A comparação é o ladrão da alegria. Aprenda como sair desse ciclo e começar a viver de acordo com seus próprios valores.",
+    "link": "posts/como-parar-de-se-comparar.html",
+    "data": "30 de Julho de 2026",
+    "leitura": "9 min"
+  },
+  {
+    "titulo": "O Poder do Esforço Diário: Por Que Consistência Vence o Talento",
+    "tag": "Desenvolvimento Pessoal",
+    "imagem": "assets/img/esforco-diario.jpg",
+    "resumo": "O talento abre portas, mas é o esforço diário que constrói o resultado. Descubra por que a consistência é a verdadeira vantagem competitiva.",
+    "link": "posts/o-poder-do-esforco-diario.html",
+    "data": "29 de Julho de 2026",
+    "leitura": "8 min"
+  },
+  {
+    "titulo": "Como Manter a Calma Quando Tudo Parece Fora de Controle",
+    "tag": "Estoicismo Prático",
+    "imagem": "assets/img/manter-calma.jpg",
+    "resumo": "Quando a vida parece caótica, a calma não é fraqueza — é a maior força que podemos cultivar. Aprenda como praticá-la.",
+    "link": "posts/como-manter-a-calma-quando-tudo-parece-fora-de-controle.html",
+    "data": "28 de Julho de 2026",
+    "leitura": "8 min"
+  },
+  {
+    "titulo": "Como se Preparar para as Tempestades da Vida",
+    "tag": "Estoicismo Prático",
+    "imagem": "assets/img/tempestades-vida.jpg",
+    "resumo": "A vida é cheia de tempestades inesperadas. Aprenda como construir uma base sólida para enfrentá-las com serenidade e força.",
+    "link": "posts/como-se-preparar-para-as-tempestades-da-vida.html",
+    "data": "21 de Julho de 2026",
+    "leitura": "9 min"
+  },
+  {
     "titulo": "Produtividade Sábia: Como Fazer Menos e Produzir Mais",
     "tag": "Produtividade Sábia",
     "imagem": "assets/img/produtividade-sabia.jpg",
